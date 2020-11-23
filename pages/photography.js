@@ -22,7 +22,7 @@ export async function getStaticProps() {
 export default function PhotographyPage({ images }) {
     return (
         <Layout>
-            <div className="flex justify-center items-center h-screen -mt-24 pb-36 md:pt-36 pt-20">
+            <div className="flex justify-center items-center h-screen -mt-24 md:-mt-2">
                 {images &&
                     images.map(image => (
 
