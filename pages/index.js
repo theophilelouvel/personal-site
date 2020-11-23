@@ -22,7 +22,7 @@ export async function getStaticProps() {
 export default function Index({ blogs }) {
   return (
     <Layout>
-      <div>
+      <div className="mt-10 px-10" >
         {blogs &&
           blogs.map(blog => (
             <div key={blog.id}>
