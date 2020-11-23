@@ -19,9 +19,7 @@ export default function Layout({ children, home }) {
                 </header>
                 <main className="mt-20 md:mt-0 overflow-y-auto w-full bg-white">
                     {/* <div className="sticky top-0 h-12 pointer-events-none inset-x-0 bg-gradient-to-b from-white md:hidden"></div> */}
-                    <div className="px-8 md:px-10 py-6 md:py-14">
-                        {children}
-                    </div>
+                    {children}
                 </main>
             </div>
         </div>

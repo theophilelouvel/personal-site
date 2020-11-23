@@ -34,7 +34,7 @@ export default function Sidebar() {
                 </button>
             </div >
             {isOpen && (
-                <div className="flex flex-col items-center fixed top-0 pt-10 md:hidden bg-white">
+                <div className="z-10 flex flex-col items-center fixed top-0 pt-10 md:hidden bg-white">
                     <button onClick={handleToggle} className="btn-nav fixed top-4 right-6">
                         <FiX size="30px" />
                     </button>
