@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Sidebar from 'components/Sidebar/Sidebar'
-import MobileMenu from 'components/Sidebar/MobileMenu'
+import Sidebar from 'components/Navigation/Sidebar'
+import MobileMenu from 'components/Navigation/MobileMenu'
 
 export default function Layout({ children, home }) {
     return (

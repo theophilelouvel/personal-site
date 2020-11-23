@@ -4,7 +4,7 @@ const links = [
     { name: 'twitter', href: 'https://twitter.com/theophilelouvel', icon: <FiTwitter /> },
     { name: 'youtube', href: 'https://www.youtube.com/channel/UCco896WsL_UlJeOecstyRAA', icon: <FiYoutube /> },
     { name: 'github', href: 'https://github.com/theophilelouvel', icon: <FiGithub /> },
-    { name: 'linkedin', href: 'https://www.linkedin.com/theophilelouvel', icon: <FiLinkedin /> },
+    { name: 'linkedin', href: 'https://www.linkedin.com/in/theophilelouvel', icon: <FiLinkedin /> },
     { name: 'mail', href: 'mailto:louveltheophile@gmail.com', icon: <FiMail /> }
 ]
 

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Navigation from './Navigation'
+import NavLinks from './NavLinks'
 import SocialIcons from './SocialIcons'
 import { FiMenu, FiX } from 'react-icons/fi'
 import Link from 'next/link'
@@ -38,7 +38,7 @@ export default function Sidebar() {
                     <button onClick={handleToggle} className="btn-nav fixed top-4 right-6">
                         <FiX size="30px" />
                     </button>
-                    <Navigation />
+                    <NavLinks />
                     <div className="fixed bottom-16">
                         <SocialIcons />
                     </div>
