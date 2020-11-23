@@ -15,3 +15,4 @@ This website was built using the following stack:
 ## Design Resources
 
 - [react-icons](https://react-icons.github.io/react-icons/icons?name=fi)
+- [framer-motion](https://github.com/framer/motion)
