@@ -36,5 +36,4 @@ yarn-error.log*
 
 # testFiles
 testPost.md
-buffer
-.gitignore
+z-trash
