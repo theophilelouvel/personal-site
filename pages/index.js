@@ -1,18 +1,27 @@
-// import Head from 'next/head'
-// import Link from 'next/link'
 import Layout from 'components/Layout'
-import { siteInfo, mediumArticles } from 'utils/siteMetadata'
+import { mediumArticles } from 'utils/siteMetadata'
+
+// export async function getStaticProps() {
+//   const { blogs } = await getAllPosts(siteInfo.author)
+
+//   if (!blogs) {
+//     return {
+//       notFound: true,
+//     }
+//   }
+
+//   return {
+//     props: {
+//       blogs
+//     },
+//     revalidate: 60
+//   }
+// }
 
 export default function Index() {
   return (
     <Layout>
-      {/* <div class="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"> */}
-      {/* <div class="absolute inset-0">
-          <div class="bg-white h-1/3 sm:h-2/3"></div>
-        </div> */}
       <div className="p-10">
-
-        {/* <div class="relative max-w-7xl mx-auto"> */}
         <div class="text-center">
           <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
             👋 Hi! I'm still building this site!
@@ -21,11 +30,11 @@ export default function Index() {
             In the meantime, here are some articles I wrote on <a href="https://theophilelouvel.medium.com/" target="_blank">Medium</a>!
                             </p>
         </div>
-        <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+        <div class="flex flex-col mt-12 max-w-lg mx-auto md:grid md:gap-5 lg:grid-cols-3 lg:max-w-none">
 
           {mediumArticles &&
             mediumArticles.map(article => (
-              <div key={article.key} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div key={article.key} className="my-4 md:my-0 flex flex-col rounded-lg shadow-lg overflow-hidden">
                 <div className="flex-shrink-0">
                   <img className="h-48 w-full object-cover" src={article.cover} alt={article.description} />
                 </div>
@@ -45,28 +54,10 @@ export default function Index() {
             ))}
 
         </div>
-        {/* </div> */}
       </div>
-      {/* </div> */}
     </Layout>
   )
 }
 
-// export async function getStaticProps() {
-//   const { blogs } = await getAllPosts(siteInfo.author)
-
-//   if (!blogs) {
-//     return {
-//       notFound: true,
-//     }
-//   }
-
-//   return {
-//     props: {
-//       blogs
-//     },
-//     revalidate: 60
-//   }
-// }
 
 
