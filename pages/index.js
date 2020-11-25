@@ -1,7 +1,6 @@
 // import Head from 'next/head'
 // import Link from 'next/link'
 import Layout from 'components/Layout'
-// import { getAllPosts } from 'lib/db-admin'
 import { siteInfo, mediumArticles } from 'utils/siteMetadata'
 
 export default function Index() {
@@ -24,18 +23,17 @@ export default function Index() {
 
             {mediumArticles &&
               mediumArticles.map(article => (
-
-                <div key={article.key} class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                  <div class="flex-shrink-0">
-                    <img class="h-48 w-full object-cover" src={article.cover} alt="" />
+                <div key={article.key} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                  <div className="flex-shrink-0">
+                    <img className="h-48 w-full object-cover" src={article.cover} alt={article.description} />
                   </div>
-                  <div class="flex-1 p-6 flex flex-col justify-between">
-                    <div class="flex-1">
-                      <a href={article.href} class="block mt-2">
-                        <p class="text-xl font-semibold text-gray-900">
+                  <div className="flex-1 p-6 flex flex-col justify-between">
+                    <div className="flex-1">
+                      <a href={article.href} target="_blank" className="block mt-2">
+                        <p className="text-xl font-semibold text-gray-900">
                           {article.title}
                         </p>
-                        <p class="mt-3 text-base text-gray-500">
+                        <p className="mt-3 text-base text-gray-500">
                           {article.description}
                         </p>
                       </a>
