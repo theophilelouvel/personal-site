@@ -18,7 +18,7 @@ export default function Layout({ children, home }) {
                     <Sidebar />
                     <MobileMenu />
                 </header>
-                <main className="scrolling touch md:scrolling-auto mt-20 md:mt-0 overflow-y-auto w-full bg-white">
+                <main className="mt-20 md:mt-0 overflow-y-auto w-full bg-white">
                     {/* <div className="sticky top-0 h-12 pointer-events-none inset-x-0 bg-gradient-to-b from-white md:hidden"></div> */}
                     {children}
                 </main>
