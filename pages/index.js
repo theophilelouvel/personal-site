@@ -21,7 +21,8 @@ import { mediumArticles } from 'utils/siteMetadata'
 export default function Index() {
   return (
     <Layout>
-      <div className="p-10 scrolling touch md:scrolling-auto">
+          // scrolling touch md:scrolling-auto
+      <div className="p-10">
         <div class="text-center">
           <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
             👋 Hi! I'm still building this site!
@@ -58,5 +59,4 @@ export default function Index() {
     </Layout>
   )
 }
-
 
