@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import SocialIcons from './SocialIcons'
+import { siteInfo } from 'utils/siteMetadata'
 
 export default function Social() {
     return (
@@ -16,8 +17,8 @@ export default function Social() {
             </div>
             <div className="flex flex-col text-center">
                 <Link href="/">
-                    <a className="tracking-wide mt-5 md:mt-0 text-2xl no-underline text-gray700 dark:text-blue-300">
-                        Théophile Louvel
+                    <a className="tracking-wide mt-5 md:mt-0 text-2xl no-underline text-fake-black dark:text-blue-300">
+                        {siteInfo.author}
                     </a>
                 </Link>
                 <SocialIcons />
