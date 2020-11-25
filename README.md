@@ -7,10 +7,10 @@ This is my personal website, which I use as a platform to experiment with new te
 
 This website was built using the following stack:
 
-1. [Next.js](https://nextjs.org/)
-2. [React](https://reactjs.org/)
-3. [Tailwind CSS](https://tailwindcss.com/)
-4. [Firebase](https://firebase.google.com/)
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Sanity](https://www.sanity.io/)
 
 ## Design Resources
 

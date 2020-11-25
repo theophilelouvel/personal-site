@@ -1,43 +1,43 @@
-import Head from 'next/head'
-import Link from 'next/link'
+// import Head from 'next/head'
+// import Link from 'next/link'
 import Layout from 'components/Layout'
-import { getAllPosts } from 'lib/db-admin'
-import { siteInfo } from 'utils/siteMetadata'
+// import { getAllPosts } from 'lib/db-admin'
+import { siteInfo, mediumArticles } from 'utils/siteMetadata'
 
-export async function getStaticProps() {
-  const { blogs } = await getAllPosts(siteInfo.author)
-
-  if (!blogs) {
-    return {
-      notFound: true,
-    }
-  }
-
-  return {
-    props: {
-      blogs
-    },
-    revalidate: 60
-  }
-}
-
-export default function Index({ blogs }) {
+export default function Index() {
   return (
     <Layout>
-      <Head>
-        <title>{siteInfo.title}</title>
-      </Head>
-      <div className="mt-10 px-10" >
-        {blogs &&
-          blogs.map(post => (
-            <div key={post.id}>
-              <Link href={`/blog/${post.title}`}><a><h1 className="big-title">{post.title}</h1></a></Link>
-              <h2 className="mt-6 text-xl md:text-3xl">{post.description}</h2>
-              <p className="mt-6">Don't click the link though, that doesn't work yet 👋</p>
-            </div>
-          ))
-        }
+      <div className="mt-10 px-10">
+        <h1 className="big-title">👋 Hi! I'm still building this site, here are some of my articles on medium in the mean time!</h1>
+        <br />
+        {mediumArticles &&
+          mediumArticles.map(article => (
+            <article key={article.key}>
+              <h2 className="font-semibold text-gray-700 text-xl"><a href={article.href} target="_blank">{article.title}</a></h2>
+              <h3 className="font-light">{article.description}</h3>
+              <br />
+            </article>
+          ))}
       </div>
     </Layout>
   )
 }
+
+// export async function getStaticProps() {
+//   const { blogs } = await getAllPosts(siteInfo.author)
+
+//   if (!blogs) {
+//     return {
+//       notFound: true,
+//     }
+//   }
+
+//   return {
+//     props: {
+//       blogs
+//     },
+//     revalidate: 60
+//   }
+// }
+
+
