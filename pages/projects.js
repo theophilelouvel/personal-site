@@ -1,12 +1,34 @@
 import Layout from 'components/Layout'
+import sanity from "../lib/sanity";
 
-export default function ProjectsPage() {
+const query = `*[_type == "post"] | order(publishedAt desc) {
+    title,
+  }[0...5]
+  `;
+
+export const getStaticProps = async () => {
+    const posts = await sanity.fetch(query)
+
+    if (!posts) {
+        return {
+            notFound: true,
+        }
+    }
+
+    return {
+        props: { posts }, revalidate: 60
+    }
+}
+
+export default function Blog({ posts }) {
     return (
         <Layout>
             <div>
-                <h1 className="big-title">
-                    Coming soon...
-                </h1>
+                {posts &&
+                    posts.map(post => (
+                        <h1 className="big-title">{post.title}</h1>
+                    ))
+                }
             </div>
         </Layout>
     )
