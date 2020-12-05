@@ -1,11 +1,10 @@
 import Link from 'next/link'
 import MetaHeader from 'components/Social/MetaHeader'
 import { getSortedPostsData } from 'lib/posts'
-import { siteInfo } from 'utils/siteMetadata'
 
-export function getStaticProps() {
+export async function getStaticProps() {
 
-    const posts = getSortedPostsData()
+    const posts = await getSortedPostsData()
 
     return { props: { posts } }
 }

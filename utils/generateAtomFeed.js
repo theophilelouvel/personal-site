@@ -27,9 +27,13 @@ export default async function generateAtomFeed(author, url, latestPosts) {
     <summary>${post?.data.description}</summary>
     <published>${post.data.date}</published>
     <updated>${post.data.updated ? post.data.updated : post.data.date}</updated>
+    {/* <content type="xhtml">"Placeholder"</content> */ }
     </entry>
     `
     }).join('')}
-  
-  </feed>`
+
+</feed>`
 }
+
+
+
