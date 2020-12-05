@@ -4,7 +4,7 @@ import { siteInfo } from 'utils/siteMetadata'
 
 export default async function Sitemap(req, res) {
     // The empty string stands for the homepage, since the / will get concatenated on later
-    const pagesSlugs = ['', 'about', 'projects', 'uses']
+    const pagesSlugs = ['', 'about']
     const sortedPostData = getSortedPostsData()
 
     try {
