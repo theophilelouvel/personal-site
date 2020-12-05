@@ -1,0 +1,8 @@
+Sitemap: https://theophilelouvel.tech/sitemap.xml
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*
+Disallow: /404
+Disallow: /dashboard

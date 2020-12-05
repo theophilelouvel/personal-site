@@ -1,5 +1,14 @@
 module.exports = {
-    images: {
-        domains: ['firebasestorage.googleapis.com'],
-    },
+  async rewrites() {
+    return [
+      {
+        source: "/sitemap.xml",
+        destination: "/api/sitemap.xml",
+      },
+      {
+        source: "/atom",
+        destination: "/api/atom",
+      },
+    ];
+  },
 }

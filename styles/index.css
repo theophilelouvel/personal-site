@@ -1,6 +1,48 @@
 @tailwind base;
 
-/* Write your own custom base styles here */
+@media screen and (min-width: 1268px) {
+  html {
+    margin-left: calc(100vw - 100%);
+      margin-right: 0;
+  }
+}
+
+.blur {
+  filter: blur(8px);
+}
+
+.bg-blur {
+  backdrop-filter: blur(8px);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,0.0);
+  border-radius: 1em;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background-color:rgba(175, 175, 175, 0.4);
+  outline: none;
+  border-radius: 1em;
+  border: 2px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: rgba(175, 175, 175, 0.4);
+  outline: none;
+  border-radius: 1em;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
 
 /* Start purging... */
 @tailwind components;
@@ -8,29 +50,44 @@
 
 html,
 body {
-  @apply bg-gray-50 dark:bg-gray-900;
+  @apply bg-white dark:bg-gray-900;
 }
 
 /* Write your own custom component styles here */
-.btn-blue {
-  @apply px-4 py-2 font-bold text-white bg-blue-500 rounded;
+.btn {
+  @apply px-4 py-2 font-bold text-white rounded;
 }
 
 .btn-nav {
-  @apply text-center md:text-left text-fake-black text-xl md:text-sm block cursor-pointer rounded-lg px-4 py-2 focus:outline-none md:text-sm md:font-semibold
+  @apply text-center md:text-left text-gray-900 text-xl md:text-sm block cursor-pointer rounded-lg px-4 py-2 focus:outline-none md:font-semibold
 }
 
 .btn-nav-active {
-  @apply hidden md:block text-center md:text-left text-fake-black text-xl md:text-sm block cursor-pointer rounded-lg px-4 py-2 md:text-sm md:font-semibold focus:outline-none bg-black bg-opacity-5
+  @apply md:block text-center md:text-left text-gray-900 text-xl md:text-sm block cursor-pointer rounded-lg px-4 py-2 md:font-semibold focus:outline-none md:bg-bluegray-100
 }
 
 .big-title {
-  @apply font-bold text-2xl md:text-5xl text-fake-black dark:text-gray-100
+  @apply font-extrabold text-3xl lg:text-4xl text-gray-900 dark:text-gray-100
+}
+
+.medium-title {
+    @apply font-semibold text-lg lg:text-xl mb-4 mt-8
 }
 
 .hover-opacity {
-  @apply bg-black bg-opacity-0 md:hover:bg-opacity-5 cursor-pointer
+  @apply md:hover:bg-bluegray-100 cursor-pointer
 }
+
+code {
+    background-color: #F6F6F6;
+    @apply px-1 py-0.5 font-mono rounded text-sm inline-block
+}
+
+ol {
+    @apply list-decimal ml-4
+}
+
+/* Solution by Adam for posts: https://github.com/tailwindlabs/discuss/issues/243 */
 
 /* Start purging... */
 @tailwind utilities;

@@ -1,39 +1,40 @@
-import Layout from 'components/Layout'
-import sanity from "../lib/sanity";
+import Link from 'next/link'
+import { getSortedPostsData } from 'lib/posts'
 
-const query = `
-*[_type == "post"] | order(publishedAt desc)
-  {
-    title,
-  }
-  [0...7]
-  `
+export function getStaticProps() {
 
-export const getStaticProps = async () => {
-  const posts = await sanity.fetch(query)
+    const posts = getSortedPostsData()
 
-  if (!posts) {
-    return {
-      notFound: true,
-    }
-  }
-
-  return {
-    props: { posts }, revalidate: 60
-  }
+    return { props: { posts } }
 }
 
-export default function Blog({ posts }) {
-  return (
-    <Layout>
-      <div>
-        {posts &&
-          posts.map(post => (
-            <h1 className="big-title">{post.title}</h1>
-          ))
-        }
-      </div>
-    </Layout>
-  )
+export default function Index({ posts }) {
+    return <>
+        <h1 className="big-title mb-5 md:mb-10">All Posts</h1>
+
+        <ul>
+            {posts.map((post) => (
+                <li key={post.id} className="mb-5">
+                    {post.data.date &&
+                        <div>
+                            <time className="px-2.5 py-0.5 rounded text-xs font-medium bg-bluegray-100 text-gray-900">
+                                {post.data.date}
+                            </time>
+                        </div>}
+                    <Link
+                        as={`/blog/${post.id.replace(/\.mdx?$/, '')}`}
+                        href={`/blog/[post]`}
+                    >
+                        <a className="medium-title mb-2">
+                            {post.data.title}
+                        </a>
+                    </Link>
+                    {post.data.description &&
+                        <p className="italic font-light">{post.data.description}</p>
+                    }
+                </li>
+            ))}
+        </ul>
+    </>
 }
 
