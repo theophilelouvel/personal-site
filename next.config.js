@@ -9,10 +9,6 @@ module.exports = {
                 source: "/rss.xml",
                 destination: "/api/rss.xml",
             },
-            {
-                source: "/atom",
-                destination: "/api/atom",
-            },
         ];
     },
 }

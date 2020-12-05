@@ -35,7 +35,7 @@ const socialLinks = [
     { name: 'github', href: 'https://github.com/theophilelouvel', icon: <FiGithub /> },
     { name: 'linkedin', href: 'https://www.linkedin.com/in/theophilelouvel', icon: <FiLinkedin /> },
     // { name: 'mail', href: 'mailto:louveltheophile@gmail.com', icon: <FiMail /> },
-    { name: 'atom', href: siteInfo.url + '/atom', icon: <FiRss /> },
+    { name: 'rss', href: siteInfo.url + '/rss.xml', icon: <FiRss /> },
 ]
 
 export { navLinks, socialLinks, siteInfo }
