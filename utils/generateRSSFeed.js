@@ -16,7 +16,7 @@ export default async function generateRSSFeed(siteInfo, latestPosts) {
 ${latestPosts.map(post => {
         return `
     <item>
-    <title>Spooky Windows with Projectors and a Chromecast</title>
+    <title>${post.data.title}</title>
     <link>${siteInfo.url + '/blog/' + post.slug}</link>
     <pubDate>${post.data.updated ? post.data.updated : post.data.date}</pubDate>
     <guid>${siteInfo.url + '/blog/' + post.slug}</guid>
