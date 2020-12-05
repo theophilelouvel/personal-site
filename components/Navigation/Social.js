@@ -20,7 +20,7 @@ export default function Social() {
                 <Link href="/"><a>
                     <Image
                         src="/img/avatar.jpg"
-                        alt="Portrait"
+                        alt="Théophile Louvel's Portrait"
                         className="w-36 rounded-full"
                         width={100}
                         height={100}

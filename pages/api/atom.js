@@ -1,10 +1,10 @@
-import { getSortedPostsData } from 'lib/posts'
+import { getPostsForAtomFeed } from 'lib/posts'
 import generateAtomFeed from 'utils/generateAtomFeed'
 import { siteInfo } from 'utils/siteMetadata'
 
 export default async function AtomFeed(req, res) {
 
-    const latestPosts = getSortedPostsData().slice(0, 6)
+    const latestPosts = await getPostsForAtomFeed()
 
     const feed = await generateAtomFeed(siteInfo.author, siteInfo.url, latestPosts)
 

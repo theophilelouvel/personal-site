@@ -1,5 +1,4 @@
 export default async function generateAtomFeed(author, url, latestPosts) {
-
     return `<?xml version="1.0" encoding="utf-8"?>
   <feed xmlns="http://www.w3.org/2005/Atom">
   
@@ -22,12 +21,12 @@ export default async function generateAtomFeed(author, url, latestPosts) {
         return `
     <entry>
     <title>${post.data.title}</title>
-    <link href="${url + '/' + post.id.replace(/\.mdx?$/, '')}" rel="alternate" type="text/html"/>
-    <id>${post.id.replace(/\.mdx?$/, '')}</id>
+    <link href="${url + '/blog/' + post.slug}" rel="alternate" type="text/html"/>
+    <id>${post.slug}</id>
     <summary>${post?.data.description}</summary>
     <published>${post.data.date}</published>
     <updated>${post.data.updated ? post.data.updated : post.data.date}</updated>
-    {/* <content type="xhtml">"Placeholder"</content> */ }
+    {/* <content type="xhtml">${post.content}</content> */ }
     </entry>
     `
     }).join('')}
