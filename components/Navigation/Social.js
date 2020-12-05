@@ -6,13 +6,13 @@ import Tippy from '@tippyjs/react'
 
 export default function Social() {
 
-    const [isPlaying, setIsPlaying] = useState(false)
+    // const [isPlaying, setIsPlaying] = useState(false)
 
-    const playAudio = () => {
-        const pronunciation = document.getElementById(siteInfo.twitter)
-        isPlaying ? (pronunciation.pause(), pronunciation.currentTime = 0) : pronunciation.play()
-        setIsPlaying(!isPlaying)
-    }
+    // const playAudio = () => {
+    //     const pronunciation = document.getElementById(siteInfo.twitter)
+    //     isPlaying ? (pronunciation.pause(), pronunciation.currentTime = 0) : pronunciation.play()
+    //     setIsPlaying(!isPlaying)
+    // }
 
     return (
         <div>
@@ -29,12 +29,12 @@ export default function Social() {
             </div>
             <div className="flex flex-col text-center">
                 <div className="font-bold text-2xl text-gray-900">{siteInfo.author}</div>
-                <Tippy content="Click me 🔊">
-                    <button className="focus:outline-none" onClick={playAudio}>
-                        <div className="font-base text-xl text-gray-900 pt-1">\{siteInfo.pronunciation}\</div>
-                        <audio id={siteInfo.twitter} src="/pronunciation.mp3"></audio>
-                    </button>
-                </Tippy>
+                {/* <Tippy content="Click me 🔊"> */}
+                {/* <button className="focus:outline-none" onClick={playAudio}> */}
+                <div className="font-base text-xl text-gray-900 pt-1">\{siteInfo.pronunciation}\</div>
+                {/* <audio id={siteInfo.twitter} src="/pronunciation.mp3"></audio> */}
+                {/* </button> */}
+                {/* </Tippy> */}
             </div>
         </div>
     )

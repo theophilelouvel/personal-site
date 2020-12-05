@@ -87,6 +87,10 @@ ol {
     @apply list-decimal ml-4
 }
 
+ul {
+    @apply list-disc
+}
+
 /* Solution by Adam for posts: https://github.com/tailwindlabs/discuss/issues/243 */
 
 /* Start purging... */
