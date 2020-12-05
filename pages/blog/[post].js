@@ -64,7 +64,7 @@ export default function PostPage({ source, frontMatter, slug }) {
         content: 'article',
         locale: 'en_US',
         cover: {
-            url: '/img/cover-post.png',
+            url: '/img/post.png',
             alt: 'Théophile Louvel'
         },
     }

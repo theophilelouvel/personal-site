@@ -2,12 +2,12 @@ import { FiTwitter, FiYoutube, FiGithub, FiMail, FiLinkedin, FiRss } from 'react
 import { SiStackoverflow } from "react-icons/si";
 
 const siteInfo = {
-    favicon: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 100%22><text y=%22.9em%22 font-size=%2290%22>💾</text></svg>",
-    author: 'Théophile Louvel',
-    pronunciation: "te.ɔ.fil luvɛl",
     title: 'Théophile Louvel - Full Stack Developer',
     description: 'An ongoing conversation about Web Developement, Software Engineering & Languages',
+    author: 'Théophile Louvel',
+    pronunciation: "te.ɔ.fil luvɛl",
     url: 'https://theophilelouvel.tech',
+    favicon: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 100%22><text y=%22.9em%22 font-size=%2290%22>💾</text></svg>",
     username: 'theophilelouvel',
     twitter: {
         organisation: undefined,

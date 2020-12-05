@@ -1,5 +1,7 @@
 import Link from 'next/link'
+import MetaHeader from 'components/Social/MetaHeader'
 import { getSortedPostsData } from 'lib/posts'
+import { siteInfo } from 'utils/siteMetadata'
 
 export function getStaticProps() {
 
@@ -9,7 +11,21 @@ export function getStaticProps() {
 }
 
 export default function Index({ posts }) {
+
+    const pageMeta = {
+        title: 'Théophile Louvel\'s Blog',
+        updated: posts[0].data.updated,
+        slug: '',
+        description: 'JavaScript, Rust & Co',
+        locale: 'en_US',
+        cover: {
+            url: '/img/blog.png',
+            alt: 'Théophile Louvel\'s Blog',
+        },
+    }
+
     return <>
+        <MetaHeader pageMeta={pageMeta} />
         <h1 className="big-title mb-5 md:mb-10">All Posts</h1>
 
         <ul>

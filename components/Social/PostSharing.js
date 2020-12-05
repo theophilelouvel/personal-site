@@ -37,7 +37,7 @@ export default function PostSharing({ slug, title }) {
             </Tippy> */}
 
             <TwitterShareButton
-                via={siteInfo.twitter}
+                via={siteInfo.twitter.author}
                 title={title}
                 url={postURL}
                 hashtags={['javascript', 'webdevelopment']}

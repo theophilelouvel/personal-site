@@ -1,18 +1,16 @@
-// import { getAllPosts } from 'lib/posts'
-
 import MetaHeader from 'components/Social/MetaHeader'
-import { siteInfo } from 'utils/siteMetadata'
 
 export default function Custom404() {
+
     const pageMeta = {
-        // The title of the page in the tab
-        title: '404',
-        path: '404',
+        title: 'You\'ve gone into a Wormhole',
+        slug: '/404',
+        description: 'Nothing to see here! Move along!',
+        locale: 'en_US',
         cover: {
-            url: '/img/cover-404.png',
-            alt: `${siteInfo.title} - 404`
+            url: '/img/404.svg',
+            alt: '404 - Turn back',
         },
-        description: siteInfo.description
     }
 
     return <>
