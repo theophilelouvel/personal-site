@@ -1,11 +1,12 @@
 import { getPostsForAtomFeed } from 'lib/posts'
-import generateAtomFeed from 'utils/generateAtomFeed'
+import generateRSSFeed from 'utils/generateRSSFeed'
+import { siteInfo } from 'utils/siteMetadata'
 
 export default async function AtomFeed(req, res) {
 
     const latestPosts = await getPostsForAtomFeed()
 
-    const feed = await generateAtomFeed(latestPosts)
+    const feed = await generateRSSFeed(siteInfo, latestPosts)
 
     try {
         res.status(200).setHeader("Content-Type", "text/xml; charset=utf-8");
