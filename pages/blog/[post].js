@@ -42,7 +42,10 @@ export default function PostPage({ source, frontMatter, slug }) {
         description: frontMatter.description,
         content: 'article',
         locale: 'en_US',
-        cover: { url: '/img/post.png', alt: 'Théophile Louvel' },
+        cover: {
+            url: `https://source.unsplash.com/${frontMatter.cover}/833x250`,
+            alt: 'Théophile Louvel'
+        },
     }
 
     const content = hydrate(source, { components })
