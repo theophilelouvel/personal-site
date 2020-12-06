@@ -8,7 +8,7 @@ export default function Post({ content, frontMatter, slug }) {
 
         <header className="mb-8 md:mb-10 lg:mb-12">
             {frontMatter.cover &&
-                <div className="mb-5 md:mb-10">
+                <div className="">
                     <Image
                         src={`https://source.unsplash.com/${frontMatter.cover}/833x250`}
                         alt={frontMatter.description}
@@ -18,7 +18,7 @@ export default function Post({ content, frontMatter, slug }) {
                 </div>
             }
             {frontMatter.date &&
-                <div className="lg:mb-1">
+                <div className="mt-5 lg:mb-1">
                     <time className="px-2.5 py-0.5 rounded text-xs font-medium bg-bluegray-100 text-gray-900">
                         {frontMatter.date}
                     </time>

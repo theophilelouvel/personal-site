@@ -34,6 +34,8 @@ export const getStaticProps = async ({ params }) => {
 
 export default function PostPage({ source, frontMatter, slug }) {
 
+    const cover = frontMatter.cover ? `https://source.unsplash.com/${frontMatter.cover}/833x250` : '/img/post.png'
+
     const pageMeta = {
         title: frontMatter.title,
         date: frontMatter.date,
@@ -43,7 +45,7 @@ export default function PostPage({ source, frontMatter, slug }) {
         content: 'article',
         locale: 'en_US',
         cover: {
-            url: `https://source.unsplash.com/${frontMatter.cover}/833x250`,
+            url: cover,
             alt: 'Théophile Louvel'
         },
     }
