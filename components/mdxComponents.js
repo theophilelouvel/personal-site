@@ -15,8 +15,7 @@ const components = {
             {props.children}
         </HighlightCode>
     ),
-    CurrentTechCards: dynamic(() => import('components/CurrentTechCards')),
-    FutureTechCards: dynamic(() => import('components/FutureTechCards')),
+    TechCards: dynamic(() => import('components/TechCards')),
     // TestComponent: dynamic(() => import('components/TestComponent')),
 }
 

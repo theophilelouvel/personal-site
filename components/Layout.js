@@ -15,7 +15,7 @@ export default function Layout({ children, home }) {
                     <Sidebar />
                     <MobileMenu />
                 </header>
-                <main className="mt-20 md:mt-0 md:ml-64 px-3 md:px-6 lg:px-12 xl:px-24 pb-12 md:pb-0 overflow-y-auto md:min-h-screen">
+                <main className="mt-20 md:mt-0 md:ml-64 px-3 md:px-6 lg:px-12 xl:px-16 pb-12 md:pb-0 overflow-y-auto md:min-h-screen">
                     {children}
                 </main>
             </div>

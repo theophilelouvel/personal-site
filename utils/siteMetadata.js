@@ -38,26 +38,4 @@ const socialLinks = [
     { name: 'rss', href: siteInfo.url + '/rss.xml', icon: <FiRss /> },
 ]
 
-const currentTechs = [
-    { name: 'Node.js', src: '/img/techs/nodejs.svg', href: 'https://nodejs.org/en/' },
-    { name: 'React', src: '/img/techs/react.svg', href: 'https://reactjs.org/' },
-    { name: 'Next.js', src: '/img/techs/nextjs.svg', href: 'https://nextjs.org/' },
-    { name: 'Firebase', src: '/img/techs/firebase.svg', href: 'https://firebase.google.com/' },
-    { name: 'Express', src: '/img/techs/express.svg', href: 'http://expressjs.com/' },
-    { name: 'Git', src: '/img/techs/git.svg', href: 'https://git-scm.com/' },
-    { name: 'GitHub', src: '/img/techs/github.svg', href: 'https://github.com/' },
-    { name: 'Jest', src: '/img/techs/jest.svg', href: 'https://jestjs.io/' },
-    { name: 'MongoDB', src: '/img/techs/mongodb.svg', href: 'https://www.mongodb.com/' },
-    { name: 'Redux', src: '/img/techs/redux.svg', href: 'https://redux.js.org/' },
-    { name: 'Tailwind', src: '/img/techs/tailwindcss.svg', href: 'https://tailwindcss.com/' },
-    { name: 'Webpack', src: '/img/techs/webpack.svg', href: 'https://webpack.js.org/' },
-]
-
-const futureTechs = [
-    { name: 'Rust', src: '/img/techs/rust.svg', href: 'https://www.rust-lang.org/' },
-    { name: 'TypeScript', src: '/img/techs/typescript.svg', href: 'https://www.typescriptlang.org/' },
-    { name: 'Electron', src: '/img/techs/electron.svg', href: 'https://www.electronjs.org/' },
-    // { name: 'TensorFlow', src: '/img/techs/tensorflow.svg', href: 'https://www.tensorflow.org/' },
-]
-
-export { navLinks, socialLinks, siteInfo, currentTechs, futureTechs }
+export { navLinks, socialLinks, siteInfo }
