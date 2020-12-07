@@ -59,11 +59,11 @@ body {
 }
 
 .btn-nav {
-  @apply text-center md:text-left text-gray-900 text-xl md:text-sm block cursor-pointer rounded-lg px-4 py-2 focus:outline-none md:font-semibold
+  @apply text-center text-gray-900 text-xl md:text-sm block cursor-pointer rounded-lg px-4 py-2 focus:outline-none md:font-semibold
 }
 
 .btn-nav-active {
-  @apply md:block text-center md:text-left text-gray-900 text-xl md:text-sm block cursor-pointer rounded-lg px-4 py-2 md:font-semibold focus:outline-none md:bg-bluegray-100
+  @apply md:block text-center text-gray-900 text-xl md:text-sm block cursor-pointer rounded-lg px-4 py-2 md:font-semibold focus:outline-none md:bg-bluegray-100
 }
 
 .big-title {

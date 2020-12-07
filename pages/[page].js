@@ -1,14 +1,14 @@
 import hydrate from 'next-mdx-remote/hydrate'
 
-import { getPostById, getPostsPaths } from 'lib/posts'
+import { getPageById, getPagesPaths } from 'lib/pages'
 
 import MetaHeader from 'components/Social/MetaHeader'
-import Post from 'components/Post/Post'
+import Post from 'components/Page/Page'
 import components from 'components/mdxComponents'
 
 export const getStaticPaths = async () => {
 
-    const paths = await getPostsPaths()
+    const paths = await getPagesPaths()
 
     return {
         paths,
@@ -19,7 +19,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
 
-    const { source, frontMatter, slug } = await getPostById(params.post)
+    const { source, frontMatter, slug } = await getPageById(params.page)
 
     return {
         props: {
@@ -27,17 +27,17 @@ export const getStaticProps = async ({ params }) => {
             frontMatter,
             slug,
         },
-        revalidate: 3600
+        // Checks for changing within 30 minutes after each request
+        revalidate: 1800
     }
 }
 
-export default function PostPage({ source, frontMatter, slug }) {
+export default function PagePage({ source, frontMatter, slug }) {
 
     const cover = frontMatter.cover ? `https://source.unsplash.com/${frontMatter.cover}/1200x630` : '/img/hero.png'
 
     const pageMeta = {
         title: frontMatter.title,
-        date: frontMatter.date,
         updated: frontMatter.updated,
         slug,
         description: frontMatter.description,
@@ -56,4 +56,3 @@ export default function PostPage({ source, frontMatter, slug }) {
         <Post content={content} frontMatter={frontMatter} slug={slug} />
     </>
 }
-

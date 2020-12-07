@@ -1,9 +1,9 @@
 import HighlightCode from 'components/HighlightCode'
-import PostLink from 'components/Post/PostLink'
-import dynamic from 'next/dynamic'
+import CustomLink from 'components/CustomLink'
+// import dynamic from 'next/dynamic'
 
 const components = {
-    a: PostLink,
+    a: CustomLink,
     h2: ({ className, ...props }) => (
         <h2 className="medium-title">{props.children}</h2>
     ),

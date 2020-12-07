@@ -1,10 +1,10 @@
-import { getPostsForAtomFeed } from 'lib/posts'
+import { getPostsForFeed } from 'lib/posts'
 import generateRSSFeed from 'utils/generateRSSFeed'
 import { siteInfo } from 'utils/siteMetadata'
 
 export default async function AtomFeed(req, res) {
 
-    const latestPosts = await getPostsForAtomFeed()
+    const latestPosts = await getPostsForFeed()
 
     const feed = await generateRSSFeed(siteInfo, latestPosts)
 

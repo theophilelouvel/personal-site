@@ -1,4 +1,4 @@
-export default function generateSitemap(siteURL, pagesSlugs, postsSlugsAndISODate) {
+export default function generateSitemap(siteURL, pagesSlugs, postsSlugsWithDate) {
 
     const today = new Date().toISOString().split('T')[0]
 
@@ -11,7 +11,7 @@ export default function generateSitemap(siteURL, pagesSlugs, postsSlugsAndISODat
   </url>`
     }).join('')
 
-    const postsMap = postsSlugsAndISODate.map(post => {
+    const postsMap = postsSlugsWithDate.map(post => {
         return `<url>
     <loc>${getURL(post.id.replace(/\.mdx?$/, ''))}</loc>
     <lastmod>${post.data.updated}</lastmod>

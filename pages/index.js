@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import MetaHeader from 'components/Social/MetaHeader'
 import { getSortedPostsData } from 'lib/posts'
 
@@ -6,10 +7,18 @@ export async function getStaticProps() {
 
     const posts = await getSortedPostsData()
 
-    return { props: { posts } }
+    return {
+        props: {
+            posts
+        },
+        revalidate: 3600
+    }
 }
 
 export default function Index({ posts }) {
+
+    const cover = 'OhJmwB4XWLE'
+    const alt = 'Théophile Louvel\'s Blog'
 
     const pageMeta = {
         title: 'Théophile Louvel\'s Blog',
@@ -18,15 +27,21 @@ export default function Index({ posts }) {
         description: 'JavaScript, TypeScript, React, Next.js, Tailwind, Rust & Co',
         locale: 'en_US',
         cover: {
-            url: '/img/blog.png',
-            alt: 'Théophile Louvel\'s Blog',
+            cover: cover ? cover : `/img/hero.png`,
+            alt
         },
     }
 
     return <>
         <MetaHeader pageMeta={pageMeta} />
+        {/* <Image
+            src={`https://source.unsplash.com/${cover}/833x300`}
+            alt={alt}
+            width={833}
+            height={300}
+        /> */}
 
-        <h1 className="big-title mb-5 md:mb-10 mt-3 md:mt-20">All Posts</h1>
+        <h1 className="big-title mb-5 md:mb-10 mt-5 md:mt-16">All Posts</h1>
 
         {posts.map((post) => (
             <div key={post.id} className="mb-5">

@@ -8,7 +8,7 @@ export default function Projects() {
         description: 'Théophile Louvel\'s Metrics',
         locale: 'en_US',
         cover: {
-            url: '/img/dashboard.png',
+            url: '/img/hero.png',
             alt: 'About Théophile Louvel\'s',
         },
     }

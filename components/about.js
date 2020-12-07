@@ -1,3 +1,8 @@
+
+// import hydrate from 'next-mdx-remote/hydrate'
+
+// import { getPageById, getPostsPaths } from 'lib/posts'
+
 import MetaHeader from 'components/Social/MetaHeader'
 
 export default function About() {
