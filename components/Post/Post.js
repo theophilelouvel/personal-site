@@ -10,10 +10,10 @@ export default function Post({ content, frontMatter, slug }) {
             {frontMatter.cover &&
                 <div className="">
                     <Image
-                        src={`https://source.unsplash.com/${frontMatter.cover}/833x250`}
+                        src={`https://source.unsplash.com/${frontMatter.cover}/833x300`}
                         alt={frontMatter.description}
                         width={833}
-                        height={250}
+                        height={300}
                     />
                 </div>
             }

@@ -26,7 +26,7 @@ export default function Index({ posts }) {
     return <>
         <MetaHeader pageMeta={pageMeta} />
 
-        <h1 className="big-title mb-5 md:mb-10">All Posts</h1>
+        <h1 className="big-title mb-5 md:mb-10 mt-3 md:mt-20">All Posts</h1>
 
         {posts.map((post) => (
             <div key={post.id} className="mb-5">
