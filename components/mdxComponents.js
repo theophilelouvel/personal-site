@@ -1,6 +1,6 @@
 import HighlightCode from 'components/HighlightCode'
 import CustomLink from 'components/CustomLink'
-// import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic'
 
 const components = {
     a: CustomLink,
@@ -14,7 +14,9 @@ const components = {
         <HighlightCode language={className}>
             {props.children}
         </HighlightCode>
-    )
+    ),
+    CurrentTechCards: dynamic(() => import('components/CurrentTechCards')),
+    FutureTechCards: dynamic(() => import('components/FutureTechCards')),
     // TestComponent: dynamic(() => import('components/TestComponent')),
 }
 
