@@ -12,7 +12,7 @@ export default function HighlightCode({ children, language }) {
     return (
         <>
             <code ref={code} className={language + " rounded-lg my-5"}>
-                <div className="pl-3 py-3">
+                <div className="md:pl-3 py-3">
                     {children}
                 </div>
             </code>

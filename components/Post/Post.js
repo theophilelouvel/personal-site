@@ -11,7 +11,7 @@ export default function Post({ content, frontMatter, slug }) {
                 <Image
                     src={`https://source.unsplash.com/${frontMatter.cover}/833x300`}
                     alt={frontMatter.description}
-                    width={833}
+                    width={894}
                     height={300}
                 />
             }
