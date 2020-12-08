@@ -4,5 +4,6 @@ User-agent: *
 
 Allow: /*
 
-Disallow: /api/*
+Disallow: /api/rss.xml
+
 Disallow: /404
