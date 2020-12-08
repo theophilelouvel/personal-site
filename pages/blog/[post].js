@@ -27,7 +27,7 @@ export const getStaticProps = async ({ params }) => {
             frontMatter,
             slug,
         },
-        revalidate: 3600
+        // revalidate: 3600
     }
 }
 
