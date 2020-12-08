@@ -2,6 +2,7 @@ import hydrate from 'next-mdx-remote/hydrate'
 
 import { getPostById, getPostsPaths } from 'lib/posts'
 
+import Layout from 'components/Layout'
 import MetaHeader from 'components/Social/MetaHeader'
 import Post from 'components/Post/Post'
 import components from 'components/mdxComponents'
@@ -52,8 +53,10 @@ export default function PostPage({ source, frontMatter, slug }) {
     const content = hydrate(source, { components })
 
     return <>
-        <MetaHeader pageMeta={pageMeta} />
-        <Post content={content} frontMatter={frontMatter} slug={slug} />
+        <Layout>
+            <MetaHeader pageMeta={pageMeta} />
+            <Post content={content} frontMatter={frontMatter} slug={slug} />
+        </Layout>
     </>
 }
 

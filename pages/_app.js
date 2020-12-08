@@ -4,7 +4,6 @@ import "nprogress/nprogress.css"
 import 'tippy.js/dist/tippy.css'
 
 import dynamic from 'next/dynamic'
-import Layout from 'components/Layout'
 
 const TopProgressBar = dynamic(
     () => {
@@ -16,9 +15,7 @@ const TopProgressBar = dynamic(
 function MyApp({ Component, pageProps }) {
     return <>
         <TopProgressBar />
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
+        <Component {...pageProps} />
     </>
 }
 
