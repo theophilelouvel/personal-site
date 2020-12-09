@@ -8,7 +8,7 @@ cover: uQMyw1VFKqI
 
 ⚡ Disclaimer: This article itself is a recursive function.
 
-```js:index.js
+```js
 function readThisArticle() {
     if ("you read this article" && "you understood recursion") {
     return "Switch to something else."

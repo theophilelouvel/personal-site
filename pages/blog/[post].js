@@ -2,7 +2,7 @@ import { getPostById, getPostsPaths } from 'lib/posts'
 
 import Layout from 'components/Layout'
 import MetaHeader from 'components/Social/MetaHeader'
-import Post from 'components/Post/Post'
+import Post from 'Components/Post'
 
 export const getStaticPaths = async () => {
 
