@@ -70,16 +70,44 @@ body {
     @apply font-semibold text-lg lg:text-xl mb-4 mt-8
 }
 
-code {
-    @apply rounded-lg
+.markdown ol {
+    @apply list-decimal
 }
 
-ol {
-    @apply list-decimal ml-4
+.markdown li {
+ @apply ml-6 md:ml-12 lg:ml-24 xl:ml-32
 }
 
-ul {
+.markdown ul {
     @apply list-disc
+}
+
+.markdown h2 {
+    @apply font-semibold text-lg lg:text-xl mb-4 mt-8
+}
+
+.markdown p {
+    @apply my-5
+}
+
+.markdown pre > code {
+    @apply p-2 md:p-5 rounded
+}
+
+.markdown p > code {
+    @apply bg-gray-100 font-mono py-0.5 px-1 text-sm rounded
+}
+
+.markdown li > code {
+    @apply bg-gray-100 font-mono py-0.5 px-1 text-sm rounded
+}
+
+.markdown .remark-code-title {
+    @apply font-mono ml-2 text-sm
+}
+
+.markdown p li {
+    @apply xl:text-lg
 }
 
 /* Solution by Adam for posts: https://github.com/tailwindlabs/discuss/issues/243 */

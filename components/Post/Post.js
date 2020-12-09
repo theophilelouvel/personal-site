@@ -1,6 +1,5 @@
 import CustomLink from 'components/CustomLink'
 import PostSharing from 'components/Social/PostSharing'
-import Image from 'next/image'
 
 export default function Post({ content, frontMatter, slug }) {
 
@@ -20,9 +19,9 @@ export default function Post({ content, frontMatter, slug }) {
             )}
         </header>
 
-        <article>{content}</article>
+        <article className="markdown" dangerouslySetInnerHTML={{ __html: content }} />
 
-        <div className="flex mt-6 justify-end">
+        <div className="flex mt-10 justify-end">
             <PostSharing slug={slug} title={frontMatter?.title} />
         </div>
 
