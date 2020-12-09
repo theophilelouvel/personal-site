@@ -71,8 +71,7 @@ body {
 }
 
 code {
-    background-color: #F6F6F6;
-    @apply px-1 py-0.5 font-mono rounded text-sm inline-block
+    @apply rounded-lg
 }
 
 ol {

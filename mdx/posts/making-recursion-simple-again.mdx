@@ -8,7 +8,7 @@ cover: uQMyw1VFKqI
 
 ⚡ Disclaimer: This article itself is a recursive function.
 
-```
+```js
 function readThisArticle() {
     if ("you read this article" && "you understood recursion") {
     return "Switch to something else."
@@ -38,7 +38,7 @@ To cut a short story even shorter, functions have (almost) the highest priority 
 
 Let’s consider the following example:
 
-```
+```js
 function myFunction() {
     return 5 * 5
 }
@@ -54,7 +54,7 @@ Once again, we get `30`. Nothing breathtaking, I’ll give you that.
 
 Now can you guess what happens when we run the following code?
 
-```
+```js
 myFunction()
 
 function myFunction() {
@@ -79,7 +79,7 @@ So recursion is merely a way of taking advantage of functions’ operator preced
 
 But enough talking, let's look at a recursive function already:
 
-```
+```js
 let i = 0
 
 function myFunction() {
@@ -116,7 +116,7 @@ Just as you can only take the highest book in a pile of books, only the latest o
 
 Let's just agree it looks something like this:
 
-```
+```js
 5*5
 5+5
 5-5
@@ -125,7 +125,7 @@ Let's just agree it looks something like this:
 
 Or, in our case, somewhat like this:
 
-```
+```js
 myFunction()
 myFunction()
 myFunction()
@@ -148,7 +148,7 @@ Using recursion, this is as simple as using an if statement at the very beginnin
 This is what is called the base case.
 Getting back to out example, it would look something like this:
 
-```
+```js
 var i = 0
 function myFunction() {
     if (i > 10) {
@@ -166,7 +166,7 @@ Now the first thing that will happen in our function is that i’s value will be
 
 You could also check for the base case somewhere else, like so:
 
-```
+```js
 var i = 0
 function myFunction() {
     i++
@@ -200,7 +200,7 @@ For instance, let’s take a look at the famous factorial problem, where you tak
 
 Here’s the non-recursive approach:
 
-```
+```js
 function factorial(n) {
     if (n === 1) {
         return n
@@ -220,7 +220,7 @@ factorial(4)
 
 And here’s the recursive approach:
 
-```
+```js
 const recursiveFactorial = (n) => n === 1 ? n : n * factorial(n - 1)
 ```
 
@@ -232,7 +232,7 @@ I feel it’s a nice little addition to the developer’s toolbox, but you obvio
 
 Hopefully you were able to understand recursion by now, and if not, before switching to something else...
 
-```
+```js
     readThisArticle()
 }
 ```

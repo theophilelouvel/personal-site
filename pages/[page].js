@@ -28,7 +28,6 @@ export const getStaticProps = async ({ params }) => {
             frontMatter,
             slug,
         },
-        // Checks for changing within 30 minutes after each request
         // revalidate: 1800
     }
 }
