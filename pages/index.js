@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Layout from 'components/Layout'
 import MetaHeader from 'components/Social/MetaHeader'
 import { getSortedPostsData } from 'lib/posts'
+import title from 'title'
+import specialTitle from 'utils/specialTitle'
 
 export async function getStaticProps() {
 
@@ -50,7 +52,7 @@ export default function Index({ posts }) {
                         href={`/blog/[post]`}
                     >
                         <a className="medium-title mb-2">
-                            {post.data.title}
+                            {title(post.data.title, { special: specialTitle })}
                         </a>
                     </Link>
                     {post.data.description &&

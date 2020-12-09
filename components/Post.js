@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import PostSharing from 'components/Social/PostSharing'
+import title from 'title'
+import specialTitle from 'utils/specialTitle'
 
 export default function Post({ content, frontMatter, slug }) {
 
@@ -13,7 +15,7 @@ export default function Post({ content, frontMatter, slug }) {
                     </time>
                 </div>
             }
-            <h1 className="big-title">{frontMatter.title}</h1>
+            <h1 className="big-title">{title(frontMatter.title, { special: specialTitle })}</h1>
             {frontMatter.description && (
                 <p className="italic font-light text-lg">{frontMatter.description}</p>
             )}
