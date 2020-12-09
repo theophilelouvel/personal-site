@@ -95,11 +95,11 @@ body {
 }
 
 .markdown p > code {
-    @apply bg-gray-100 font-mono py-0.5 px-1 text-sm rounded
+    @apply bg-bluegray-100 font-mono py-0.5 px-1.5 text-sm rounded inline-block
 }
 
 .markdown li > code {
-    @apply bg-gray-100 font-mono py-0.5 px-1 text-sm rounded
+    @apply bg-bluegray-100 font-mono py-0.5 px-1.5 text-sm rounded inline-block
 }
 
 .markdown .remark-code-title {
@@ -108,6 +108,14 @@ body {
 
 .markdown p li {
     @apply xl:text-lg
+}
+
+.markdown a {
+    @apply text-blue-600
+}
+
+.link-color {
+    @apply text-blue-600
 }
 
 /* Solution by Adam for posts: https://github.com/tailwindlabs/discuss/issues/243 */

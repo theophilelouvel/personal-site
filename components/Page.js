@@ -1,4 +1,4 @@
-import CustomLink from 'components/CustomLink'
+import Link from 'next/link'
 
 export default function Post({ content, frontMatter, slug }) {
 
@@ -8,10 +8,12 @@ export default function Post({ content, frontMatter, slug }) {
             <h1 className="big-title">{frontMatter.title}</h1>
         </header>
 
-        <main>{content}</main>
+        <main className="markdown">{content}</main>
 
         <nav className="flex justify-center my-16">
-            <CustomLink href="/">← Home</CustomLink>
+            <Link href="/"><a className="link-color">
+                ← Home
+            </a></Link>
         </nav>
 
     </>

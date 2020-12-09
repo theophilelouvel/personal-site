@@ -1,4 +1,4 @@
-import CustomLink from 'components/CustomLink'
+import Link from 'next/link'
 import PostSharing from 'components/Social/PostSharing'
 
 export default function Post({ content, frontMatter, slug }) {
@@ -26,7 +26,7 @@ export default function Post({ content, frontMatter, slug }) {
         </div>
 
         <nav className="flex justify-center my-16">
-            <CustomLink href="/">← Home</CustomLink>
+            <Link href="/"><a className="link-color">← Home</a></Link>
         </nav>
 
     </>

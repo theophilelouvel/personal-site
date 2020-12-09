@@ -4,7 +4,7 @@ import { getPageById, getPagesPaths } from 'lib/pages'
 
 import Layout from 'components/Layout'
 import MetaHeader from 'components/Social/MetaHeader'
-import Post from 'components/Page/Page'
+import Page from 'Components/Page'
 import components from 'components/mdxComponents'
 
 export const getStaticPaths = async () => {
@@ -54,7 +54,7 @@ export default function PagePage({ source, frontMatter, slug }) {
     return <>
         <Layout>
             <MetaHeader pageMeta={pageMeta} />
-            <Post content={content} frontMatter={frontMatter} slug={slug} />
+            <Page content={content} frontMatter={frontMatter} slug={slug} />
         </Layout>
     </>
 }
