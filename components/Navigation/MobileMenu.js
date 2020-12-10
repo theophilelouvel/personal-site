@@ -13,7 +13,7 @@ export default function MobileMenu() {
     }
     return (
         <>
-            <div className="z-40 overflow-hidden bg-blur bg-white bg-opacity-70 md:hidden fixed top-0 flex flex-row items-center justify-between p-6 w-screen h-20">
+            <div className="z-30 overflow-hidden bg-blur bg-white bg-opacity-70 md:hidden fixed top-0 flex flex-row items-center justify-between p-6 w-screen h-20">
                 <div className="flex flex-1 items-center">
                     <Image
                         src="/img/avatar.jpg"
