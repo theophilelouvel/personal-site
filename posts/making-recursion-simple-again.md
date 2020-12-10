@@ -24,7 +24,7 @@ Now that I got the hang of it, here is my attempt to explain recursion and make 
 All code examples are written in JavaScript, but bare in mind that recursion is a programming concept and is in no way language dependent.
 
 
-## To understand recursion, one must first understand recursion
+## To understand recursion, one must first understand recursion iphone
 
 The first thing to understand is that recursion is nothing but a convenient syntax that allows for less verbose code in order to perform a given operation.
 
