@@ -4,6 +4,7 @@ import MetaHeader from 'components/Social/MetaHeader'
 import { getSortedPostsData } from 'lib/posts'
 import title from 'title'
 import specialTitle from 'utils/specialTitle'
+import { siteInfo } from 'utils/siteMetadata'
 
 export async function getStaticProps() {
 
@@ -26,7 +27,7 @@ export default function Index({ posts }) {
         title: 'Théophile Louvel\'s Blog',
         updated: posts[0].data.updated,
         slug: '',
-        description: 'JavaScript, TypeScript, React, Next.js, Tailwind, Rust & Co',
+        description: siteInfo.description,
         locale: 'en_US',
         cover: {
             cover: cover ? cover : `/img/hero.png`,
