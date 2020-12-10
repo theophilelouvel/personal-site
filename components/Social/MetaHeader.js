@@ -15,6 +15,9 @@ export default function MetaHeader({ pageMeta }) {
     return (
         <Head>
             {
+                <meta charset="utf-8" />
+            }
+            {
                 pageMeta.title &&
                 <title>{pageMeta.title}</title>
             }
@@ -23,8 +26,8 @@ export default function MetaHeader({ pageMeta }) {
                 <meta property="profile:username" content={siteInfo.username} />
             }
             {
-                siteInfo.author && siteInfo.description &&
-                <meta name={siteInfo.author} content={siteInfo.description} />
+                pageMeta.description &&
+                <meta name="description" content={pageMeta.description} />
             }
             {
                 pageMeta.locale &&
