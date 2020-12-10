@@ -3,7 +3,7 @@ import { SiStackoverflow } from "react-icons/si";
 
 const siteInfo = {
     title: 'Théophile Louvel - Full Stack Developer',
-    description: 'An ongoing conversation about Web Developement, Software Engineering and Languages',
+    description: 'An ongoing conversation about Web Developement, Software Engineering and Languages, mainly around JavaScript, TypeScript & Rust.',
     author: 'Théophile Louvel',
     pronunciation: "te.ɔ.fil luvɛl",
     url: 'https://theophilelouvel.tech',

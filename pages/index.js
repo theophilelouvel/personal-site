@@ -51,8 +51,9 @@ export default function Index({ posts }) {
                     <Link
                         as={`/blog/${post.id.replace(/\.mdx?$/, '')}`}
                         href={`/blog/[post]`}
+                        className=""
                     >
-                        <a className="medium-title mb-2">
+                        <a className="medium-title hover:text-amber-600">
                             {title(post.data.title, { special: specialTitle })}
                         </a>
                     </Link>

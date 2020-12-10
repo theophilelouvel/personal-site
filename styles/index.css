@@ -78,7 +78,7 @@ body {
 }
 
 .markdown h2 > a {
-    @apply text-gray-900 hover:text-blue-600
+    @apply text-gray-900 hover:text-amber-600
 }
 
 .markdown p {
@@ -106,11 +106,11 @@ body {
 }
 
 .markdown a {
-    @apply text-blue-600
+    @apply text-amber-600
 }
 
 .link-color {
-    @apply text-blue-600
+    @apply text-amber-600
 }
 
 /* Solution by Adam for posts: https://github.com/tailwindlabs/discuss/issues/243 */
