@@ -4,7 +4,7 @@ import { getPageById, getPagesPaths } from 'lib/pages'
 
 import Layout from 'components/Layout'
 import MetaHeader from 'components/Social/MetaHeader'
-import Page from 'Components/Page'
+import Page from 'components/Page'
 import components from 'components/mdxComponents'
 
 export const getStaticPaths = async () => {
