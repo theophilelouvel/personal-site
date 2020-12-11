@@ -24,7 +24,7 @@ export default function Index({ posts }) {
     const alt = 'Théophile Louvel\'s Blog'
 
     const pageMeta = {
-        title: 'Théophile Louvel\'s Blog',
+        title: siteInfo.title,
         updated: posts[0].data.updated,
         slug: '',
         description: siteInfo.description,
