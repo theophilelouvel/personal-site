@@ -98,7 +98,7 @@ body {
 }
 
 .markdown .remark-code-title {
-    @apply font-mono ml-2 text-sm
+    @apply font-mono ml-2 text-sm text-bluegray-500
 }
 
 .markdown p li {

@@ -2,7 +2,7 @@
 title: Making recursion simple again
 description: Recursion be a cruel mistress
 date: '2020-10-05'
-updated: '2020-10-05'
+updated: '2020-12-07'
 cover: uQMyw1VFKqI
 ---
 

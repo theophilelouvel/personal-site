@@ -24,7 +24,11 @@ const specialTitle = [
     'USB',
     'UX',
     'VSCode',
-    'w_flux'
+    'w_flux',
+    'aka',
+    'Next.js',
+    'NoSQL',
+    'SEO'
 ]
 
 export default specialTitle

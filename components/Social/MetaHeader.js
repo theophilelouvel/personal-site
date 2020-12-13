@@ -14,9 +14,9 @@ import { siteInfo } from 'utils/siteMetadata'
 export default function MetaHeader({ pageMeta }) {
     return (
         <Head>
-            {
-                <meta charset="utf-8" />
-            }
+
+            <meta charSet="utf-8" />
+
             {
                 pageMeta.title &&
                 <title>{pageMeta.title}</title>
