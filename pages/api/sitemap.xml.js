@@ -10,7 +10,17 @@ export default async function Sitemap(req, res) {
         { id: '' },
     ]
 
-    const postPages = await getSortedPostsData()
+    const postData = await getSortedPostsData()
+
+    const postPages = postData.map(post => {
+        return {
+            id: `blog/${post.id}`,
+            data: {
+                updated: post.data.updated
+            }
+        }
+    })
+
     const dynamicPages = await getPagesData()
 
     const pages = staticPages.concat(dynamicPages).concat(postPages)
