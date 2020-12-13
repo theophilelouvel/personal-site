@@ -61,9 +61,9 @@ export default function MetaHeader({ pageMeta }) {
                 siteInfo.title &&
                 <meta property="og:site_name" content={siteInfo.title} />
             }
-            {/* Options: “summary_large_image”, “app”, or “player” */
+            {/* Options: "summary", “summary_large_image”, “app”, or “player” */
                 siteInfo.twitter &&
-                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:card" content="summary_large_image" />
             }
             {
                 pageMeta.cover && pageMeta.cover.alt &&
