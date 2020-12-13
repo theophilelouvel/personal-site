@@ -36,7 +36,7 @@ export default function PostPage({ source, frontMatter, slug }) {
         title: frontMatter.title,
         date: frontMatter.date,
         updated: frontMatter.updated,
-        slug: `/blog/${slug}`,
+        slug: `blog/${slug}`,
         description: frontMatter.description,
         content: 'article',
         locale: 'en_US',
