@@ -2,7 +2,6 @@ import { useState } from 'react'
 import NavLinks from './NavLinks'
 import SocialIcons from './SocialIcons'
 import { FiMenu, FiX } from 'react-icons/fi'
-import Link from 'next/link'
 import Image from 'next/image'
 import { siteInfo } from 'utils/siteMetadata'
 

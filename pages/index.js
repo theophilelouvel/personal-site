@@ -20,7 +20,9 @@ export async function getStaticProps() {
 
 export default function Index({ posts }) {
 
-    const cover = 'OhJmwB4XWLE'
+    const image = 'OhJmwB4XWLE'
+    const cover = image ? `https://source.unsplash.com/${image}/1200x630` : `${siteInfo.url}/img/avatar.png`
+
     const alt = 'Théophile Louvel\'s Blog'
 
     const pageMeta = {
@@ -30,7 +32,7 @@ export default function Index({ posts }) {
         description: siteInfo.description,
         locale: 'en_US',
         cover: {
-            cover: cover ? cover : `/img/hero.png`,
+            url: cover,
             alt
         },
     }
