@@ -2,7 +2,7 @@
 title: Blog Building and Yak Shaving
 description: A short story of building this blog
 date: "2020-12-13"
-updated: "2020-12-13"
+updated: "2020-12-25"
 cover: Ljim28haqBY
 ---
  
@@ -181,16 +181,12 @@ import capitalize from 'utils/remark-capitalize-with-options'
  
 ## The SEO side of things
  
-🚨 Notice I say *good* SEO as in "good practices", not *great* as in "clickbait". In my opinion, **good SEO means optimized indexation** (creating tags for search engines to read and help them understand what your page is about). People looking for the information you deliver or the goods you sell should stumble onto your content if it's relevant enough, but that's it.
- 
-I don't believe in SEO strategies and SEO-driven content. This calls for dull content people run away from as soon as they open it and doesn't have a great future as **search engines become better and better at telling people overdoing the SEO and clickbait thing from those actually busy making useful stuff.** Bounce rates don't lie.
- 
-That being said, my solution for that was to use `front-matter` to parse the metadata in my `.md` files and leverage that to dynamically create meta tags search engines and social sharing platforms could read from.
- 
-There's a plugin called `next-seo` or something along those lines for that purpose, but in the end I decided to write my own as it gave me more flexibility. The problem with one-size-fits-all solutions is they cover a good part of use cases, but need anything beyond that and you'll have to hack the heck out of the so-called "solution", making it effectively easier to just write this code yourself from scratch.
+I wanted good enough SEO, meaning by that **optimized indexation** (creating tags for search engines to read and help them understand what your page is about), as opposed to SEO-driven content.
+
+It was as simple as using `front-matter` to parse the metadata in my `.md` files and leverage that to dynamically create meta tags search engines and social sharing platforms could read from.
  
 If you wonder what it looks like in practice, just crack open Firefox or Chrome dev tools and look at the `<head>` of this very page! It's essentially just a component that I include in every page thanks to the `<Head>` component made available to us by Next.js:
- 
+
 ```js:components/metaHeader.js
 import Head from 'next/head'
 import { siteInfo } from 'utils/siteMetadata'
@@ -212,10 +208,12 @@ export default function MetaHeader({ pageMeta }) {
     )
 }
 ```
- 
+
+I kind of messed up the "description" tag when I deployed, and Google indexed all pages with whatever it found on them instead of using the meta tag 🤦‍♂️ Cherry on top, Google console's "request indexing" is down at the moment, so I'll just have to wait for the crawlers to come back... At least I won't do the same mistake twice 😅 
+
 There is much more to meta tags than that, but you get the idea. A title and a description is a good place to start, after that you might want to get into open graph protocols and social cards, but that's for another article!
  
-## A conclusion called conclusion 🤦‍♂️
+## A conclusion called conclusion
  
 I'm actually glad I did all that, as I now feel even more comfortable with those techs and discovered Sanity along the way.
 
