@@ -2,8 +2,8 @@ import { FiTwitter, FiYoutube, FiGithub, FiMail, FiLinkedin, FiRss } from 'react
 import { SiStackoverflow } from "react-icons/si";
 
 const siteInfo = {
-    title: 'Théophile Louvel - Full Stack Developer',
-    description: 'Théo\'s blog about Web Developement, Software Engineering and Languages.',
+    title: 'Théophile Louvel - Full Stack Web Developer',
+    description: 'JavaScript Developer, both front-end (React) and back-end (Node.js).',
     author: 'Théophile Louvel',
     pronunciation: "te.ɔ.fil luvɛl",
     url: 'https://theophilelouvel.tech',
