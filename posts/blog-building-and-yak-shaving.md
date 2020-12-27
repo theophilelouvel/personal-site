@@ -8,7 +8,7 @@ cover: Ljim28haqBY
  
 **Yak shaving** is the deceptive causality that leads you to switch from one task to another, each time taking you further away from your original goal.
  
-To get a better grasp of the concept, watch this 30 seconds video of [Hal replacing a light bulb](https://www.youtube.com/watch?v=8fnfeuoh4s8) or read [this note by Seth Godin](https://seths.blog/2005/03/dont_shave_that/). 
+For a better grasp of the concept, watch this 30 seconds video of [Hal replacing a light bulb](https://www.youtube.com/watch?v=8fnfeuoh4s8) or read [this note by Seth Godin](https://seths.blog/2005/03/dont_shave_that/). 
  
 We all have to face that yak at times, and building this blog was no exception.
  
@@ -20,7 +20,7 @@ A blog it is then!
  
 ## The tech stack
  
-**In my mind, a blog should be blazing fast and have good SEO**. As pages don't change on a regular basis, this obviously called for **static generation** (pre-rendering pages at build time, which allows to serve the same document over and over to many clients instead of having to generate the pages upon each request as with "classic" server-side rendering).
+As pages don't change on a regular basis, this called for **static generation** (pre-rendering pages at build time, which allows to serve the same document over and over to many clients instead of having to generate the pages upon each request as with "classic" server-side rendering).
  
 [Next.js](https://nextjs.org/) is a React framework that allows you to do just that. But, cherry on top, unlike other frameworks it doesn't just stop there: You can use static generation on *some pages* while still serving fully-fledged web apps on others. **The perfect mix of speed and versatility!**
  
