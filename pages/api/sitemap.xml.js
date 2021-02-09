@@ -1,5 +1,4 @@
 import { getSortedPostsData } from 'lib/posts'
-import { getPagesData } from 'lib/pages'
 import generateSitemap from 'utils/generateSitemap'
 import { siteInfo } from 'utils/siteMetadata'
 
@@ -8,6 +7,7 @@ export default async function Sitemap(req, res) {
     // The empty string stands for the homepage, since the / will get concatenated on later
     const staticPages = [
         { id: '' },
+        {id: 'about'}
     ]
 
     const postData = await getSortedPostsData()
@@ -21,9 +21,7 @@ export default async function Sitemap(req, res) {
         }
     })
 
-    const dynamicPages = await getPagesData()
-
-    const pages = staticPages.concat(dynamicPages).concat(postPages)
+    const pages = staticPages.concat(postPages)
 
     try {
         res.status(200).setHeader('Content-Type', 'text/xml')
