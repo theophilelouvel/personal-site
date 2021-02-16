@@ -28,7 +28,8 @@ const specialTitle = [
     'aka',
     'Next.js',
     'NoSQL',
-    'SEO'
+    'SEO',
+    'KMP'
 ]
 
 export default specialTitle
