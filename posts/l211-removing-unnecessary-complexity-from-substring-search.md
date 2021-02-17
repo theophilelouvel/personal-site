@@ -1,8 +1,8 @@
 ---
 title: L211, Removing Unnecessary Complexity from Substring Search
 description: KMP, Rabin-Karp & Boyer-Moore vs L211
-date: '2021-01-16'
-updated: '2021-01-16'
+date: '2021-02-16'
+updated: '2021-02-17'
 cover: cvBBO4PzWPg
 ---
 
@@ -55,7 +55,7 @@ The general idea is that every time you find a character matching the first char
 
 In our example, that means every time we meet a `"t"` in the long string we "pause" the main loop and start a new **nested loop**.
 
-As all nested loops, this isn't great: This algorithm's **time complexity is O(m * n)**, so roughly somewhere along the lines of O(n log n). Space complexity isn't really of the essence in linear search since it's basically gonna stay O(n) no matter what.
+As all nested loops, this isn't great: This algorithm's **time complexity is O(m * n)**. Space complexity isn't really of the essence in linear search since it's basically gonna stay O(n) no matter what.
 
 At first glance, it looks like there's little we can do about it: **The input can't be sorted**, so we have little choice but to stick with **linear search**.
 
@@ -151,9 +151,7 @@ Indeed, **the KMP algorithm postulates that words often have repeating patterns*
 
 In fact, if you take a look at examples demonstrating the KMP algorithm, patterns presented are almost never real english words (if you don't count *abracadabra*, but how often do you get to use that one in a sentence?), because there aren't so many words displaying the properties it's expecting.
 
-At the same time, this approach tends to increase the number of checks the algorithm has to perform on each iteration, which might just eliminate all the benefit from building this table depending on the text being searched.
-
-While it is often refered to as an O(n) time complexity as it might be less than O(m * n) in some circumstances, it seems to be much closer to **O(n log n)** in practice.
+At the same time, this approach tends to increase the number of checks the algorithm has to perform on each iteration, which might just eliminate all the benefit from building this table depending on the text being searched, resulting in a worst-case scenario of O(m * n).
 
 ## The Rabin-Karp way
 
@@ -165,7 +163,7 @@ To remove those **false positives** during the equality check, we can multiply e
 
 But this now introduces a lot more operations in a single loop iteration, not mentioning that when multiplying by powers of 10, if you're looking for a pattern that is 100 characters long, you end up with **numbers bigger than the number of atoms in the observable universe**. If you water down those hashes using modular arithmetics, you end up with more false positives and therefore more time spent in looping over non matching strings.
 
-Make of that what you will, but I doubt this represents a major improvement - if any - over our initial approach with a time complexity still somewhere around **O(n log n)**.
+Make of that what you will, but I doubt this represents a major improvement - if any - over our initial approach.
 
 If you're curious what it looks like, you can find [a JavaScript implementation of the Rabin-Karp algorithm here.](https://github.com/djktno/rabin-karp-js/blob/master/rk.js) 
 
