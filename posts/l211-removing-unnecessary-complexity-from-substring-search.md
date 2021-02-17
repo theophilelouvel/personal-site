@@ -8,11 +8,11 @@ cover: cvBBO4PzWPg
 
 Lately I've been sharpening my algorithm writing skills, and one of the "challenges" I came across has to do with **substring search**.
 
-As I like to take a shot at things before being fed an answer, I was surprised with the level of complexity some of the solutions I stumbled upon after my attempt presents: From *rolling hashes* (Rabin-Karp) to *prefixes that are also suffixes* (KMP).
+As I like to take a shot at things before being fed an answer, I was surprised with the level of complexity some of the solutions I stumbled upon after my attempt present, among which *rolling hashes* (Rabin-Karp) and *prefixes that are also suffixes* (KMP). 
 
-Before diving into these solutions, let's take a look at what might be regarded as the classical approach to substring search.
+Before diving into these solutions, let's take a look at what might be regarded as the brute-force or non-optimized approach to substring search.
 
-*P.S.: All code examples are written in JavaScript, but bare in mind that the programming concepts they convey are in no way language dependent.*
+*P.S.: All code examples are written in JavaScript, yet the concepts they illustrate remain cross-language.*
 
 ## The Problem with Substring Search
 
@@ -49,13 +49,11 @@ console.log(
 )
 ```
 
-This is what **non-optimized substring search** usually looks like.
-
 The general idea is that every time you find a character matching the first character from the pattern string, you start another loop to try and find out if the following characters match your pattern string.
 
 In our example, that means every time we meet a `"t"` in the long string we "pause" the main loop and start a new **nested loop**.
 
-As all nested loops, this isn't great: This algorithm's **time complexity is O(m * n)**. Space complexity isn't really of the essence in linear search since it's basically gonna stay O(n) no matter what.
+As all nested loops, this isn't great: This algorithm's **time complexity is O(m * n)**.
 
 At first glance, it looks like there's little we can do about it: **The input can't be sorted**, so we have little choice but to stick with **linear search**.
 
@@ -63,7 +61,7 @@ At first glance, it looks like there's little we can do about it: **The input ca
 
 Even though the input can't be sorted, there are still ways to make substring search more efficient. One approach is to take advantage of repetitions that happen inside of the pattern: For instance, let's say we're looking for the pattern "abracadabra" inside of the long string.
 
-The [KMP approach](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm) is to create a table for the pattern where you mark repeating patterns. This table is all about finding repeating patterns inside the pattern, or, as it is sometimes described, finding prefixes that are also suffixes.
+The [KMP approach](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm) is to create a table for the pattern where you mark repeating patterns. This table is all about finding repeating patterns inside the pattern, or, as it is sometimes described, finding *prefixes that are also suffixes*.
 
 Computing this table looks like this:
 
@@ -215,7 +213,7 @@ If you'd like to see it in action (algorithm POV, is that a thing?), go check ou
 
 ## L211, or Simple Substring Search
 
-Having looked at all these complex alternatives, allow me to jump back to the solution I came up with before looking at any of those.
+Having looked at all these complex alternatives, allow me to introduce the solution I came up with before looking at any of those.
 
 Moving away from nested loops and sliding windows it actually involves **one pointer and a single loop**. Its time complexity is much more predictable: O(n), no matter what.
 
@@ -255,10 +253,10 @@ console.log(
 )
 ```
 
-Why call it L211? As I never came accross this approach anywhere else, I guess I get to name it, and it's the first thing I publish in '21, if that makes sense 🙃.
+Why call it L211? As I never came accross this approach anywhere else, I guess I'm the one who gets to name it, and it's the first thing I publish in '21, if that makes sense 🙃.
 
 But most of all this somewhat reminds me of the [LZ77 lossless data compression algorithm](https://en.wikipedia.org/wiki/LZ77_and_LZ78), which is also based on pointers!
 
-While I didn't benchmark all those solutions against each other, I think the Big(O) speaks for itself. My point is not that my approach is "better", just that it might be simpler to reason about while being just as efficient as the Boyer-Moore algorithm in terms of speed. **Not reinventing the wheel, just making it simpler**.
+While I didn't benchmark all those solutions against each other, I think the Big(O) speaks for itself. My point is not that my approach is "better", just that it might be simpler to reason about while being just as efficient as the Boyer-Moore algorithm in terms of speed. **I don't pretend to be reinventing the wheel, just to try making it simpler**.
 
 Now I realize that I may have missed something or not have thought through all edge cases, so feel free to reach me on twitter if you'd like to point something out, I'd be grateful!
