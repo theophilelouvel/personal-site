@@ -1,6 +1,6 @@
 ---
-title: L211, Removing Unnecessary Complexity from Substring Search
-description: KMP, Rabin-Karp & Boyer-Moore vs L211
+title: Removing Unnecessary Complexity from Substring Search
+description: KMP, Rabin-Karp & Boyer-Moore vs 3S
 date: '2021-02-16'
 updated: '2021-02-17'
 cover: cvBBO4PzWPg
@@ -211,7 +211,7 @@ Here's a full [JavaScript implementation of the Boyer-Moore algorithm](https://g
 
 If you'd like to see it in action (algorithm POV, is that a thing?), go check out this [live demo](https://personal.utdallas.edu/~besp/demo/John2010/boyer-moore.htm).
 
-## L211, or Simple Substring Search
+## 3S (Simple Substring Search)
 
 Having looked at all these complex alternatives, allow me to introduce the solution I came up with before looking at any of those.
 
@@ -219,7 +219,7 @@ Moving away from nested loops and sliding windows it actually involves **one poi
 
 The general idea is quite simple really: We check every character against the first character of the pattern to then update the pointer (and whatever we want to return) accordingly. Since there are *no nested loops* (can I stress this enough?) and we're keeping equality checks down to their bare minimum, we end up with **less operations for a roughly equivalent number of loop iterations** compared to the Boyer-Moore algorithm.
 
-```js:linearSubstringSearch.js
+```js:3s.js
 const linearSubstringSearch = (long, pattern) => {
     if (long.length < pattern.length) return 0
 
@@ -252,10 +252,6 @@ console.log(
     linearSubstringSearch(text, search)
 )
 ```
-
-Why call it L211? As I never came accross this approach anywhere else, I guess I'm the one who gets to name it, and it's the first thing I publish in '21, if that makes sense 🙃.
-
-But most of all this somewhat reminds me of the [LZ77 lossless data compression algorithm](https://en.wikipedia.org/wiki/LZ77_and_LZ78), which is also based on pointers!
 
 While I didn't benchmark all those solutions against each other, I think the Big(O) speaks for itself. My point is not that my approach is "better", just that it might be simpler to reason about while being just as efficient as the Boyer-Moore algorithm in terms of speed. **I don't pretend to be reinventing the wheel, just to try making it simpler**.
 
