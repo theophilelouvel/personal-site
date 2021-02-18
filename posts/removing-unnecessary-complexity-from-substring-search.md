@@ -220,7 +220,7 @@ Moving away from nested loops and sliding windows it actually involves **one poi
 The general idea is quite simple really: We check every character against the first character of the pattern to then update the pointer (and whatever we want to return) accordingly. Since there are *no nested loops* (can I stress this enough?) and we're keeping equality checks down to their bare minimum, we end up with **less operations for a roughly equivalent number of loop iterations** compared to the Boyer-Moore algorithm.
 
 ```js:3s.js
-const linearSubstringSearch = (long, pattern) => {
+const simpleSubstringSearch = (long, pattern) => {
     if (long.length < pattern.length) return 0
 
     let occurences = 0
