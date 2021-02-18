@@ -29,7 +29,8 @@ const specialTitle = [
     'Next.js',
     'NoSQL',
     'SEO',
-    'KMP'
+    'KMP',
+    '3S'
 ]
 
 export default specialTitle
