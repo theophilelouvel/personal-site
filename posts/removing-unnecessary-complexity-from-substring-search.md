@@ -249,7 +249,7 @@ const text = "The quick brown fox jumps over the lazy dog"
 const search = "the"
 
 console.log(
-    linearSubstringSearch(text, search)
+    simpleSubstringSearch(text, search)
 )
 ```
 
