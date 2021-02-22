@@ -15,25 +15,25 @@
   backdrop-filter: blur(8px);
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     z-index: 40;
     width: 5px;
     height: 5px;
     background-color: #F5F5F5;
-}
+} */
 
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track { */
     /* -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.1); */
-  background-color: #e2e2e2;
-}
+  /* background-color: #e2e2e2;
+} */
 
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
     background-color: #29d;
 }
 
 ::-webkit-scrollbar-corner {
   display: none;
-}
+} */
 
 /* Start purging... */
 @tailwind components;
@@ -50,15 +50,15 @@ body {
 }
 
 .btn-nav {
-  @apply mt-2 text-center text-gray-900 text-xl md:text-sm block cursor-pointer rounded-lg px-4 py-2 focus:outline-none md:font-semibold
+  @apply mt-2 text-center text-gray-900 text-xl md:text-sm block cursor-pointer rounded-lg px-4 py-2 focus:outline-none md:font-semibold dark:text-bluegray-300
 }
 
 .big-title {
-  @apply font-extrabold text-3xl lg:text-4xl text-gray-900 dark:text-gray-100
+  @apply font-extrabold text-3xl lg:text-4xl text-gray-900 dark:text-bluegray-200
 }
 
 .medium-title {
-    @apply font-semibold text-lg lg:text-xl mb-4 mt-8
+    @apply font-semibold text-lg lg:text-xl mb-4 mt-8 dark:text-bluegray-300
 }
 
 .markdown ol {
@@ -70,7 +70,7 @@ body {
 }
 
 .markdown ul {
-    @apply list-disc
+    @apply list-disc dark:text-bluegray-200
 }
 
 h2 {
@@ -78,11 +78,11 @@ h2 {
 }
 
 .markdown h2 > a {
-    @apply text-gray-900 hover:text-amber-600
+    @apply text-gray-900 hover:text-amber-600 dark:text-bluegray-300
 }
 
 .markdown p {
-    @apply my-5
+    @apply my-5 dark:text-bluegray-300
 }
 
 .markdown pre > code {
@@ -90,7 +90,7 @@ h2 {
 }
 
 .markdown p > code {
-    @apply bg-bluegray-100 font-mono py-0.5 px-1.5 text-sm rounded inline-block
+    @apply bg-bluegray-100 font-mono py-0.5 px-1.5 text-sm rounded inline-block dark:bg-bluegray-700 dark:text-bluegray-200
 }
 
 .markdown li > code {

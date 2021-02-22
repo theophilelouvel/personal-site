@@ -46,7 +46,7 @@ export default function Index({ posts }) {
                 <div key={post.id} className="mb-5">
                     {post.data.date &&
                         <div>
-                            <time className="px-2.5 py-0.5 rounded text-xs font-medium bg-bluegray-100 text-gray-900">
+                            <time className="px-2.5 py-0.5 rounded text-xs font-medium bg-bluegray-100 text-gray-900 dark:bg-bluegray-700 dark:text-bluegray-200">
                                 {post.data.date}
                             </time>
                         </div>}
@@ -60,7 +60,7 @@ export default function Index({ posts }) {
                         </a>
                     </Link>
                     {post.data.description &&
-                        <p className="italic font-light">{post.data.description}</p>
+                        <p className="italic font-light dark:text-bluegray-300">{post.data.description}</p>
                     }
                 </div>
             ))}

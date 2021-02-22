@@ -6,7 +6,7 @@ updated: '2021-02-17'
 cover: cvBBO4PzWPg
 ---
 
-Lately I've been sharpening my algorithm writing skills, and one of the "challenges" I came across has to do with **substring search**.
+Lately I've been sharpening my algorithm writing skills, and one of the "challenges" I came across had to do with **substring search**.
 
 As I like to take a shot at things before being fed an answer, I was surprised with the level of complexity some of the solutions I stumbled upon after my attempt present, among which *rolling hashes* (Rabin-Karp) and *prefixes that are also suffixes* (KMP). 
 

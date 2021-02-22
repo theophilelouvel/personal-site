@@ -10,7 +10,7 @@ import { EmailShareButton, FacebookShareButton, LinkedinShareButton, TwitterShar
 
 export default function PostSharing({ slug, title }) {
 
-    const iconStyles = "text-coolgray-700 hover:text-amber-600"
+    const iconStyles = "text-coolgray-700 hover:text-amber-600 dark:text-bluegray-400"
     const iconSize = 20
     const iconWrapper = "mr-8 focus:outline-none"
 

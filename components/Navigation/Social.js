@@ -32,10 +32,10 @@ export default function Social() {
                 </a></Link>
             </div>
             <div className="flex flex-col text-center">
-                <div className="font-bold text-2xl text-gray-900">{siteInfo.author}</div>
+                <div className="font-bold text-2xl text-gray-900 dark:text-bluegray-300">{siteInfo.author}</div>
                 <Tippy content="Click me 🔊">
                     <button className="focus:outline-none" onClick={playAudio}>
-                        <div className="font-base text-xl text-gray-900 pt-1">\{siteInfo.pronunciation}\</div>
+                        <div className="font-base text-xl text-gray-900 pt-1 dark:text-bluegray-300">\{siteInfo.pronunciation}\</div>
                         <audio id={siteInfo.twitter} src="/pronunciation.mp3"></audio>
                     </button>
                 </Tippy>

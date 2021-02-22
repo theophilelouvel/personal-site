@@ -9,13 +9,13 @@ export default function Post({ content, frontMatter, slug }) {
 
         <header className="mb-8 md:mb-10 lg:mb-12 md:mt-9">
             {frontMatter.date &&
-                <time className="mt-5 lg:mb-1 px-2.5 py-0.5 rounded text-xs font-medium bg-bluegray-100 text-gray-900">
+                <time className="mt-5 lg:mb-1 px-2.5 py-0.5 rounded text-xs font-medium bg-bluegray-100 text-gray-900 dark:bg-bluegray-700 dark:text-bluegray-200">
                     {frontMatter.date}
                 </time>
             }
-            <h1 className="big-title">{title(frontMatter.title, { special: specialTitle })}</h1>
+            <h1 className="big-title dark:text-amber-600">{title(frontMatter.title, { special: specialTitle })}</h1>
             {frontMatter.description && (
-                <p className="italic font-light text-lg">{frontMatter.description}</p>
+                <p className="italic font-light text-lg dark:text-bluegray-200">{frontMatter.description}</p>
             )}
         </header>
 

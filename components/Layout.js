@@ -9,8 +9,8 @@ Router.onRouteChangeError = () => NProgress.done()
 
 export default function Layout({ children, home }) {
     return <>
-        <div className="bg-white">
-            <div className="max-w-screen-xl md:divide-x mx-auto">
+        <div className="bg-white dark:bg-gray-900">
+            <div className="max-w-screen-xl md:divide-x mx-auto dark:divide-amber-600">
                 <div>
                     <Sidebar />
                     <MobileMenu />
