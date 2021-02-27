@@ -30,11 +30,9 @@ export default function Custom404() {
 
                 <p>Despite my love for languages, being able to ask for more cheese in five different languages felt redundant after a while...</p>
 
-                <p>Programming conciliates my passion for strategic thinking, hacking my way into new systems and a never ending crave for hands-on learning.</p>
+                <p>Programming conciliates my passion for strategic thinking, reverse engineering and hands-on learning.</p>
 
                 <p>I mostly speak French, English, Russian, <strong>Rust & JavaScript</strong>.</p>
-
-                <p>I also speak some Turkish and Italian, but I don't practice nearly enough to call myself fluent in them.</p>
 
                 <p><em> P.S.: If you wonder what my name sounds like, just click on it's phonetic transcription (desktop only)! </em></p>
 
