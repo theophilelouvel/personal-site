@@ -12,7 +12,7 @@ export default function MobileMenu() {
     }
     return (
         <>
-            <div className="z-30 overflow-hidden bg-blur bg-white bg-opacity-70 md:hidden fixed top-0 flex flex-row items-center justify-between p-6 w-screen h-20">
+            <div className="z-30 overflow-hidden bg-blur bg-white dark:bg-gray-900 bg-opacity-70 md:hidden fixed top-0 flex flex-row items-center justify-between p-6 w-screen h-20">
                 <div className="flex flex-1 items-center">
                     <Image
                         src="/img/avatar.jpg"
@@ -22,7 +22,7 @@ export default function MobileMenu() {
                         height={50}
                     />
                     <div className="text-left pl-3">
-                        <h1 className="font-bold text-xl text-gray-900 no-underline dark:text-blue-300">
+                        <h1 className="font-bold text-xl text-gray-900 no-underline dark:text-bluegray-300">
                             {siteInfo.author}
                         </h1>
                     </div>
@@ -32,7 +32,7 @@ export default function MobileMenu() {
                 </button>
             </div >
             {isOpen && (
-                <div className="z-50 h-screen w-screen bg-blur bg-white bg-opacity-70 flex flex-col items-center fixed top-0 pt-10 md:hidden">
+                <div className="z-50 h-screen w-screen bg-blur bg-white dark:bg-gray-900 bg-opacity-70 flex flex-col items-center fixed top-0 pt-10 md:hidden">
                     <button onClick={handleToggle} className="btn-nav fixed top-4 right-6">
                         <FiX size="30px" />
                     </button>
