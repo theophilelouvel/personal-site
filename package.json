@@ -14,6 +14,7 @@
     "next": "latest",
     "nprogress": "^0.2.0",
     "react": "^16.13.1",
+    "react-device-detect": "^1.15.0",
     "react-dom": "^16.13.1",
     "react-icons": "^3.11.0",
     "react-share": "^4.3.1",

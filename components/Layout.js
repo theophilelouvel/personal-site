@@ -2,6 +2,7 @@ import Sidebar from 'components/Navigation/Sidebar'
 import MobileMenu from 'components/Navigation/MobileMenu'
 import NProgress from 'nprogress'
 import Router from 'next/router'
+// import { isMobile } from "react-device-detect"
 
 Router.onRouteChangeStart = () => NProgress.start()
 Router.onRouteChangeComplete = () => NProgress.done()
