@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import Layout from 'components/Layout'
 import MetaHeader from 'components/Social/MetaHeader'
-import TechCards from 'components/TechCards'
+// import TechCards from 'components/TechCards'
 
 export default function Custom404() {
 
     const pageMeta = {
         title: 'About',
         slug: '/about',
-        description: 'Full Stack Web Developer (JavaScript, Node.js, React) from Paris, France',
+        description: 'Sofware engineer focused on web development (Rust, Java, JavaScript, Node.js, React) from Paris, France',
         locale: 'en_US',
         cover: {
             url: `https://source.unsplash.com/pIY6sz-texg/1200x630`,
@@ -24,7 +24,7 @@ export default function Custom404() {
             </header>
 
             <main className="markdown">
-                <p>👋 Hi, I'm Théo, a community-made <strong>software engineer with a focus on web development</strong> (currently on a sabbatical to learn the craft).</p>
+                <p>👋 Hi, I'm Théo, a <strong>software engineer with a focus on web development</strong> (currently on a sabbatical to learn the craft).</p>
 
                 <p>I graduated as a jurist in International Business Law, received officer training in the French military and worked as a linguist until '20.</p>
 
@@ -32,7 +32,7 @@ export default function Custom404() {
 
                 <p>Programming conciliates my passion for strategic thinking, reverse engineering and hands-on learning.</p>
 
-                <p>I mostly speak French, English, Russian, <strong>Rust & JavaScript</strong>.</p>
+                <p>I mostly speak French, English, Russian and I code in <strong>Rust, Java & JavaScript</strong>.</p>
 
                 <p><em> P.S.: If you wonder what my name sounds like, just click on it's phonetic transcription (desktop only)! </em></p>
 

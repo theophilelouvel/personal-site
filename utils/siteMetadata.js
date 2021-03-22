@@ -3,7 +3,7 @@ import { SiStackoverflow } from "react-icons/si";
 
 const siteInfo = {
     title: 'Théophile Louvel - Software Engineer',
-    description: 'Software Engineer with a focus on Web Development from Paris, France.',
+    description: 'I\'m a Software Engineer with a focus on Web Development from Paris, France. I code in Rust, Java and JavaScript and I speak French, English, Russian & Turkish.',
     author: 'Théophile Louvel',
     pronunciation: "te.ɔ.fil luvɛl",
     url: 'https://theophilelouvel.tech',
