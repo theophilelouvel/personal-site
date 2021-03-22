@@ -33,7 +33,7 @@ const socialLinks = [
     { name: 'stackoverflow', href: 'https://stackoverflow.com/users/14192686/th%c3%a9ophile-louvel', icon: <SiStackoverflow /> },
     // { name: 'youtube', href: 'https://www.youtube.com/channel/UCco896WsL_UlJeOecstyRAA', icon: <FiYoutube /> },
     { name: 'github', href: 'https://github.com/flowsn4ke', icon: <FiGithub /> },
-    { name: 'linkedin', href: 'https://www.linkedin.com/in/theophilelouvel', icon: <FiLinkedin /> },
+    { name: 'linkedin', href: 'https://www.linkedin.com/in/flowsn4ke', icon: <FiLinkedin /> },
     // { name: 'mail', href: 'mailto:louveltheophile@gmail.com', icon: <FiMail /> },
     { name: 'rss', href: siteInfo.url + '/rss.xml', icon: <FiRss /> },
 ]
