@@ -2,7 +2,7 @@
 title: Removing Unnecessary Complexity from Substring Search
 description: KMP, Rabin-Karp & Boyer-Moore vs 3S
 date: '2021-02-16'
-updated: '2021-02-17'
+updated: '2021-03-29'
 cover: cvBBO4PzWPg
 ---
 
@@ -227,6 +227,10 @@ const simpleSubstringSearch = (long, pattern) => {
     let pointer = 0
 
     for (let i = 0; i < long.length; i++) {
+        if (pointer !== 0 && str[i] === pattern[0]) {
+            pointer = 1
+            continue
+        }
         if (long[i].toLowerCase() !== pattern[pointer].toLowerCase()) {
             pointer = 0
             continue
