@@ -14,9 +14,8 @@ import { siteInfo } from 'utils/siteMetadata'
 export default function MetaHeader({ pageMeta }) {
     return (
         <Head>
-
             <meta charSet="utf-8" />
-
+            <meta name="robots" content="follow, index" />
             {
                 pageMeta.title &&
                 <title>{pageMeta.title}</title>
@@ -25,9 +24,17 @@ export default function MetaHeader({ pageMeta }) {
                 siteInfo.username &&
                 <meta property="profile:username" content={siteInfo.username} />
             }
+            {/* SEO description */
+                pageMeta.description &&
+                <meta content={pageMeta.description} name="description" />
+            }
             {
                 pageMeta.description &&
-                <meta name="description" content={pageMeta.description} />
+                <meta property="og:description" content={pageMeta.description} />
+            }
+            {
+                pageMeta.description &&
+                <meta name="twitter:description" content={pageMeta.description} />
             }
             {
                 pageMeta.locale &&
@@ -48,10 +55,6 @@ export default function MetaHeader({ pageMeta }) {
             {
                 pageMeta.title &&
                 <meta property="og:title" content={pageMeta.title} />
-            }
-            {
-                pageMeta.description &&
-                <meta property="og:description" content={pageMeta.description} />
             }
             {
                 pageMeta.cover && pageMeta.cover.url &&
@@ -77,16 +80,17 @@ export default function MetaHeader({ pageMeta }) {
                 siteInfo.twitter && siteInfo.twitter.organisation &&
                 <meta name="twitter:site" content={`@${siteInfo.twitter.organisation}`} />
             }
-            { pageMeta.content = "article" ?
-                <meta property="article:author" content={siteInfo.author} />
-                : undefined
+            {
+                pageMeta.content = "article" ?
+                    <meta property="article:author" content={siteInfo.author} />
+                    : undefined
             }
             {
-                pageMeta.date &&
+                pageMeta.content = "article" && pageMeta.date &&
                 <meta property="article:published_time" content={pageMeta.date} />
             }
             {
-                pageMeta.updated &&
+                pageMeta.content = "article" && pageMeta.updated &&
                 <meta property="article:modified_time" content={pageMeta.updated} />
             }
             {/* Facebook Analytics */

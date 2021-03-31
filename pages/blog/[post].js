@@ -38,8 +38,8 @@ export default function PostPage({ source, frontMatter, slug }) {
         updated: frontMatter.updated,
         slug: `blog/${slug}`,
         description: frontMatter.description,
-        content: 'article',
-        locale: 'en_US',
+        content: "article",
+        locale: "en_US",
         cover: {
             url: cover,
             alt: 'Théophile Louvel'

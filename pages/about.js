@@ -1,18 +1,19 @@
 import Link from 'next/link'
 import Layout from 'components/Layout'
 import MetaHeader from 'components/Social/MetaHeader'
+import { siteInfo } from 'utils/siteMetadata'
 // import TechCards from 'components/TechCards'
 
 export default function Custom404() {
 
     const pageMeta = {
-        title: 'About',
-        slug: '/about',
-        description: 'Sofware engineer focused on web development (Rust, Java, JavaScript, Node.js, React) from Paris, France',
-        locale: 'en_US',
+        title: "About - Théophile Louvel",
+        slug: "/about",
+        description: siteInfo.description,
+        locale: "en_US",
         cover: {
-            url: `https://source.unsplash.com/pIY6sz-texg/1200x630`,
-            alt: 'About Théophile Louvel',
+            url: "https://source.unsplash.com/pIY6sz-texg/1200x630",
+            alt: "About - Théophile Louvel",
         },
     }
 

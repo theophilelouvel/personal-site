@@ -20,20 +20,15 @@ export async function getStaticProps() {
 
 export default function Index({ posts }) {
 
-    const image = 'OhJmwB4XWLE'
-    const cover = image ? `https://source.unsplash.com/${image}/1200x630` : `${siteInfo.url}/img/avatar.png`
-
-    const alt = 'Théophile Louvel\'s Blog'
-
     const pageMeta = {
         title: siteInfo.title,
         updated: posts[0].data.updated,
-        slug: '',
+        slug: "",
         description: siteInfo.description,
-        locale: 'en_US',
+        locale: "en_US",
         cover: {
-            url: cover,
-            alt
+            url: "https://source.unsplash.com/OhJmwB4XWLE/1200x630",
+            alt: "Théophile Louvel\'s Blog"
         },
     }
 
