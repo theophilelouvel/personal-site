@@ -1,5 +1,5 @@
 ---
-title: Removing Unnecessary Complexity from Substring Search
+title: Unnecessary Complexity in Substring Search?
 description: KMP, Rabin-Karp & Boyer-Moore vs 3S
 date: '2021-02-16'
 updated: '2021-03-29'
