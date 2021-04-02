@@ -81,9 +81,8 @@ export default function MetaHeader({ pageMeta }) {
                 <meta name="twitter:site" content={`@${siteInfo.twitter.organisation}`} />
             }
             {
-                pageMeta.content === "article" ?
-                    <meta property="article:author" content={siteInfo.author} />
-                    : undefined
+                pageMeta.content === "article" &&
+                <meta property="article:author" content={siteInfo.author} />
             }
             {
                 pageMeta.content === "article" && pageMeta.date &&
