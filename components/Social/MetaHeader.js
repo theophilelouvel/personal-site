@@ -81,16 +81,16 @@ export default function MetaHeader({ pageMeta }) {
                 <meta name="twitter:site" content={`@${siteInfo.twitter.organisation}`} />
             }
             {
-                pageMeta.content = "article" ?
+                pageMeta.content === "article" ?
                     <meta property="article:author" content={siteInfo.author} />
                     : undefined
             }
             {
-                pageMeta.content = "article" && pageMeta.date &&
+                pageMeta.content === "article" && pageMeta.date &&
                 <meta property="article:published_time" content={pageMeta.date} />
             }
             {
-                pageMeta.content = "article" && pageMeta.updated &&
+                pageMeta.content === "article" && pageMeta.updated &&
                 <meta property="article:modified_time" content={pageMeta.updated} />
             }
             {/* Facebook Analytics */
