@@ -33,7 +33,7 @@ export default function Custom404() {
 
                 <p>Programming conciliates my passion for strategic thinking, reverse engineering and hands-on learning.</p>
 
-                <p>I mostly speak French, English, Russian and I code in <strong>Rust, Java & JavaScript</strong>.</p>
+                <p>I mostly speak French, English, Russian and I code in <strong>Rust & JavaScript</strong>.</p>
 
                 <p><em> P.S.: If you wonder what my name sounds like, just click on it's phonetic transcription (desktop only)! </em></p>
 
