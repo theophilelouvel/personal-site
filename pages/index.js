@@ -25,6 +25,7 @@ export default function Index({ posts }) {
         updated: posts[0].data.updated,
         slug: "",
         description: siteInfo.description,
+        content: "website",
         locale: "en_US",
         cover: {
             url: "https://source.unsplash.com/OhJmwB4XWLE/1200x630",

@@ -10,6 +10,7 @@ export default function Custom404() {
         title: "About - Théophile Louvel",
         slug: "/about",
         description: siteInfo.description,
+        content: "website",
         locale: "en_US",
         cover: {
             url: "https://source.unsplash.com/pIY6sz-texg/1200x630",
