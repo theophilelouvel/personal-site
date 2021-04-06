@@ -26,7 +26,7 @@ export default function MetaHeader({ pageMeta }) {
             }
             {/* SEO description */
                 pageMeta.description &&
-                <meta content={pageMeta.description} name="description" />
+                <meta name="description" content={pageMeta.description} />
             }
             {
                 pageMeta.description &&
@@ -45,7 +45,7 @@ export default function MetaHeader({ pageMeta }) {
                 <link rel="icon" href={siteInfo.favicon} />
             }
             {
-                siteInfo.url && pageMeta.slug &&
+                // siteInfo.url && pageMeta.slug &&
                 <meta property="og:url" content={`${siteInfo.url}/${pageMeta.slug}`} />
             }
             {

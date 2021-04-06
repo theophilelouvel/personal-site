@@ -25,13 +25,13 @@ export default function Custom404() {
             </header>
 
             <main className="markdown">
-                <p>👋 Hi, I'm Théo, a <strong>software engineer with a focus on web development</strong> (currently on a sabbatical to learn the craft).</p>
+                <p>👋 Hi, I'm Théo, a <strong>software engineer with a focus on web development</strong>.</p>
 
-                <p>I graduated as a jurist in International Business Law, received officer training in the French military and worked as a linguist until '20.</p>
+                {/* <p>I graduated as a jurist in International Business Law, received officer training in the French military and worked as a linguist until '20.</p>
 
                 <p>Despite my love for languages, being able to ask for more cheese in five different languages felt redundant after a while...</p>
 
-                <p>Programming conciliates my passion for strategic thinking, reverse engineering and hands-on learning.</p>
+                <p>Programming conciliates my passion for strategic thinking, reverse engineering and hands-on learning.</p> */}
 
                 <p>I mostly speak French, English, Russian and I code in <strong>Rust & JavaScript</strong>.</p>
 
