@@ -29,7 +29,7 @@ export default function Index({ posts }) {
         locale: "en_US",
         cover: {
             url: "https://source.unsplash.com/OhJmwB4XWLE/1200x630",
-            alt: "Théophile Louvel\'s Blog"
+            alt: "Théo Louvel\'s Blog"
         },
     }
 

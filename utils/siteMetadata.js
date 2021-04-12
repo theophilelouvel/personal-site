@@ -2,9 +2,9 @@ import { FiTwitter, FiYoutube, FiGithub, FiMail, FiLinkedin, FiRss } from 'react
 import { SiStackoverflow } from "react-icons/si";
 
 const siteInfo = {
-    title: "Théophile Louvel - Software Engineer",
+    title: "Théo Louvel - Software Engineer",
     description: "Software Engineer with a focus on Web Development (Rust, JavaScript) from Paris, France.",
-    author: "Théophile Louvel",
+    author: "Théo Louvel",
     pronunciation: "te.ɔ.fil luvɛl",
     url: 'https://theophilelouvel.tech',
     favicon: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 100%22><text y=%22.9em%22 font-size=%2290%22>🦀</text></svg>",

@@ -42,7 +42,7 @@ export default function PostPage({ source, frontMatter, slug }) {
         locale: "en_US",
         cover: {
             url: cover,
-            alt: 'Théophile Louvel'
+            alt: 'Théo Louvel'
         },
     }
 

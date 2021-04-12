@@ -7,14 +7,14 @@ import { siteInfo } from 'utils/siteMetadata'
 export default function Custom404() {
 
     const pageMeta = {
-        title: "About - Théophile Louvel",
+        title: "About - Théo Louvel",
         slug: "/about",
         description: siteInfo.description,
         content: "website",
         locale: "en_US",
         cover: {
             url: "https://source.unsplash.com/pIY6sz-texg/1200x630",
-            alt: "About - Théophile Louvel",
+            alt: "About - Théo Louvel",
         },
     }
 
