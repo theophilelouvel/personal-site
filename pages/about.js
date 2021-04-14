@@ -4,7 +4,7 @@ import MetaHeader from 'components/Social/MetaHeader'
 import { siteInfo } from 'utils/siteMetadata'
 import TechCards from 'components/TechCards'
 
-export default function Custom404() {
+export default function About() {
 
     const pageMeta = {
         title: "About - Théo Louvel",
@@ -14,7 +14,7 @@ export default function Custom404() {
         locale: "en_US",
         cover: {
             url: "https://source.unsplash.com/pIY6sz-texg/1200x630",
-            alt: "About - Théo Louvel",
+            alt: "about Théo Louvel",
         },
     }
 
@@ -22,7 +22,7 @@ export default function Custom404() {
         <MetaHeader pageMeta={pageMeta} />
         <Layout>
             <header className="mb-8 md:mb-10 lg:mb-12 mt-5 md:mt-16">
-                <h2 className="big-title">About</h2>
+                <h2 className="text-3xl lg:text-4xl text-gray-900 dark:text-bluegray-200 font-light mb-5 md:mb-10 mt-5 md:mt-16">About</h2>
             </header>
 
             <main className="markdown">
@@ -67,11 +67,11 @@ export default function Custom404() {
                     ]} />
             </main>
 
-            <nav className="flex justify-center my-16">
+            <div className="flex justify-center my-16">
                 <Link href="/"><a className="link-color">
                     ← Home
             </a></Link>
-            </nav>
+            </div>
         </Layout>
     </>
 }

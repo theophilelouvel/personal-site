@@ -12,6 +12,7 @@
     "gray-matter": "^4.0.2",
     "highlight.js": "^10.4.0",
     "next": "latest",
+    "next-themes": "^0.0.14",
     "nprogress": "^0.2.0",
     "react": "^16.13.1",
     "react-device-detect": "^1.15.0",

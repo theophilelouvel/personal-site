@@ -25,9 +25,9 @@ export default function Post({ content, frontMatter, slug }) {
             <PostSharing slug={slug} title={frontMatter?.title} />
         </div>
 
-        <nav className="flex justify-center my-16">
+        <div className="flex justify-center my-16">
             <Link href="/"><a className="link-color">← Home</a></Link>
-        </nav>
+        </div>
 
     </>
 }

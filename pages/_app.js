@@ -5,6 +5,8 @@ import 'tippy.js/dist/tippy.css'
 
 import dynamic from 'next/dynamic'
 
+import { ThemeProvider } from 'next-themes';
+
 const TopProgressBar = dynamic(
     () => {
         return import("components/Navigation/TopProgressBar");
@@ -13,10 +15,12 @@ const TopProgressBar = dynamic(
 );
 
 function MyApp({ Component, pageProps }) {
-    return <>
-        <TopProgressBar />
-        <Component {...pageProps} />
-    </>
+    return (
+        <ThemeProvider attribute="class">
+            <TopProgressBar />
+            <Component {...pageProps} />
+        </ThemeProvider>
+    )
 }
 
 export default MyApp

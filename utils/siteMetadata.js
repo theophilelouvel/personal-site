@@ -21,10 +21,10 @@ const siteInfo = {
 
 const navLinks = [
     { href: '/', label: 'Blog' },
-    // { href: '/projects', label: 'Projects' },
     // { href: '/dashboard', label: 'Dashboard' },
     // { href: '/photography', label: 'Photography' },
     { href: '/about', label: 'About' },
+    { href: '/timeline', label: 'Timeline' },
     // { href: '/uses', label: 'Uses' }
 ]
 
