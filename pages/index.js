@@ -38,6 +38,7 @@ export default function Index({ posts }) {
         <Layout>
             <header>
                 <h2 className="text-3xl lg:text-4xl text-amber-600 font-light mb-5 md:mb-10 mt-5 md:mt-16">Blog Posts</h2>
+                <p className="mb-10">This is my tech blog. <a target="_blank" href="https://theolouvel.medium.com/" className="text-amber-600">I also write on Medium</a> on other topics from time to time.</p>
             </header>
             <main>
                 {posts.map((post) => (

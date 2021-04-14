@@ -30,8 +30,6 @@ export default function About() {
 
                 <p>I'm widely interested in systems programming, backend development and web development in general.</p>
 
-                <p>This is my tech blog. <a href="https://theolouvel.medium.com/">I also write on Medium</a> on other topics from time to time.</p>
-
                 {/* <p>I graduated as a jurist in International Business Law, received officer training in the French military and worked as a linguist until '20.</p>
 
                 <p>Despite my love for languages, being able to ask for more cheese in five different languages felt redundant after a while...</p>
