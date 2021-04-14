@@ -7,7 +7,8 @@ export default async function Sitemap(req, res) {
     // The empty string stands for the homepage, since the / will get concatenated on later
     const staticPages = [
         { id: '' },
-        {id: 'about'}
+        { id: 'about' },
+        { id: 'timeline' }
     ]
 
     const postData = await getSortedPostsData()

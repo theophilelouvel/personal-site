@@ -1,6 +1,6 @@
 export default function generateSitemap(siteURL, pages) {
 
-    const today = new Date().toISOString().split('T')[0]
+    // const today = new Date().toISOString().split('T')[0]
 
     const getURL = (id) => siteURL + '/' + id
 
