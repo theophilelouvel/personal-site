@@ -73,12 +73,8 @@ body {
     @apply list-disc dark:text-bluegray-200
 }
 
-h2 {
-    @apply font-semibold text-lg lg:text-xl mb-4 mt-8
-}
-
-.markdown h2 > a {
-    @apply text-gray-900 hover:text-amber-600 dark:text-bluegray-300
+.markdown h3 > a {
+    @apply text-gray-900 hover:text-amber-600 dark:text-bluegray-300 font-semibold text-lg lg:text-xl mb-4 mt-8
 }
 
 .markdown p {

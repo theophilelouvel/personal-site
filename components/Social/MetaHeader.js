@@ -25,8 +25,8 @@ export default function MetaHeader({ pageMeta }) {
                 <meta property="profile:username" content={siteInfo.username} />
             }
             {/* SEO description */
-                // pageMeta.description &&
-                // <meta name="description" content={pageMeta.description} />
+                pageMeta.description &&
+                <meta name="description" content={pageMeta.description} />
             }
             {
                 pageMeta.description &&
@@ -93,12 +93,12 @@ export default function MetaHeader({ pageMeta }) {
                 <meta property="article:modified_time" content={pageMeta.updated} />
             }
             {/* Facebook Analytics */
-                siteInfo?.socialAnalytics?.facebookAppId &&
-                <meta property="fb:app_id" content={siteInfo.socialAnalytics.facebookAppId} />
+                // siteInfo?.socialAnalytics?.facebookAppId &&
+                // <meta property="fb:app_id" content={siteInfo.socialAnalytics.facebookAppId} />
             }
             {/* Twitter Analytics */
-                siteInfo.socialAnalytics && siteInfo.socialAnalytics.twitterAppId &&
-                <meta name="twitter:site" content={siteInfo.socialAnalytics.twitterAppId} />
+                // siteInfo.socialAnalytics && siteInfo.socialAnalytics.twitterAppId &&
+                // <meta name="twitter:site" content={siteInfo.socialAnalytics.twitterAppId} />
             }
         </Head>
     )

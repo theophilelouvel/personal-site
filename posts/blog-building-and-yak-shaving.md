@@ -12,13 +12,13 @@ For a better grasp of the concept, watch this 30 seconds video of [Hal replacing
  
 We all have to face that yak at times, and building this blog was no exception.
  
-## User Story (aka yours truly)
+### User Story (aka yours truly)
  
 I wanted a handcrafted shiny new place to rant about languages and programming.
  
 A blog it is then!
  
-## The tech stack
+### The tech stack
  
 As pages don't change on a regular basis, this called for **static generation** (pre-rendering pages at build time, which allows to serve the same document over and over to many clients instead of having to generate the pages upon each request as with "classic" server-side rendering).
  
@@ -30,7 +30,7 @@ Technicality is nice and all, but I also wanted a human-friendly way of writing 
  
 The obvious solution was using Markdown, so that I could serialize it into HTML and render it to the screen. With that came the question of where to store that Markdown... And so my yak shaving party started.
  
-## Yak shaving party
+### Yak shaving party
  
 As I had some hesitations as to what techs to use for the blog posts themselves, I set out to try them all.
  
@@ -44,7 +44,7 @@ But the real question is: Do I need scalability? The scope of this project is qu
  
 This approach is already more scalable. Basically all posts would be stored under the form of a long string of markdown in the database's documents. Firestore's limit for document size being 10mb, this is the perfect database for the job. But how do you notify your Next.js website when there's new content? 
  
-## Going remote with Next.js
+### Going remote with Next.js
  
 The issue with remote data for static generated pages is to trigger rebuilds when new content appears so it's effectively reflected on the website. Fortunately, Next.js provides us with two handy hacks to do so: **incremental rebuilds** and **fallback urls**.
  
@@ -179,7 +179,7 @@ import capitalize from 'utils/remark-capitalize-with-options'
         .process(content)
 ```
  
-## The SEO side of things
+### The SEO side of things
  
 I wanted good enough SEO, meaning by that **optimized indexation** (creating tags for search engines to read and help them understand what your page is about), as opposed to SEO-driven content.
 
@@ -213,7 +213,7 @@ I kind of messed up the "description" tag when I deployed, and Google indexed al
 
 There is much more to meta tags than that, but you get the idea. A title and a description is a good place to start, after that you might want to get into open graph protocols and social cards, but that's for another article!
  
-## A conclusion called conclusion
+### A conclusion called conclusion
  
 I'm actually glad I did all that, as I now feel even more comfortable with those techs and discovered Sanity along the way.
 

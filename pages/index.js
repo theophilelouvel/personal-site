@@ -36,8 +36,7 @@ export default function Index({ posts }) {
     return <>
         <MetaHeader pageMeta={pageMeta} />
         <Layout>
-            <h1 className="big-title mb-5 md:mb-10 mt-5 md:mt-16">All Posts</h1>
-
+            <h2 className="text-3xl lg:text-4xl text-gray-900 dark:text-bluegray-200 font-light mb-5 md:mb-10 mt-5 md:mt-16">Blog Posts</h2>
             {posts.map((post) => (
                 <div key={post.id} className="mb-5">
                     {post.data.date &&
@@ -46,13 +45,16 @@ export default function Index({ posts }) {
                                 {post.data.date}
                             </time>
                         </div>}
+
                     <Link
                         as={`/blog/${post.id.replace(/\.mdx?$/, '')}`}
                         href={`/blog/[post]`}
                         className=""
                     >
-                        <a className="medium-title hover:text-amber-600">
-                            {title(post.data.title, { special: specialTitle })}
+                        <a className="">
+                            <h3 className="font-extrabold text-xl md:text-2xl lg:text-3xl text-amber-600">
+                                {title(post.data.title, { special: specialTitle })}
+                            </h3>
                         </a>
                     </Link>
                     {post.data.description &&

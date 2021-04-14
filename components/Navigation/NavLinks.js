@@ -7,7 +7,7 @@ export default function Navigation({ handleToggle }) {
     const router = useRouter()
 
     return (
-        <nav className="flex flex-col md:h-full mx-4 mt-4 md:mt-6 overflow-y-auto">
+        <div className="flex flex-col md:h-full mx-4 mt-4 md:mt-6 overflow-y-auto">
 
             {navLinks.map(({ href, label }) => (
                 <div key={`${href}${label}`} className=" mt-2 md:mt-4 w-screen md:w-full">
@@ -20,7 +20,7 @@ export default function Navigation({ handleToggle }) {
                 </div>
             ))}
 
-        </nav >
+        </div >
     )
 }
 

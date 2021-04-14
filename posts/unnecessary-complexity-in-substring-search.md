@@ -14,7 +14,7 @@ Before diving into these solutions, let's take a look at what might be regarded 
 
 *P.S.: All code examples are written in JavaScript, yet the concepts they illustrate remain cross-language.*
 
-## The Problem with Substring Search
+### The Problem with Substring Search
 
 As a start, let's write a function that returns the number of times a pattern (aka text search) is found in a given string (usually called `long`).
 
@@ -57,7 +57,7 @@ As all nested loops, this isn't great: This algorithm's **time complexity is O(m
 
 At first glance, it looks like there's little we can do about it: **The input can't be sorted**, so we have little choice but to stick with **linear search**.
 
-## The KMP approach
+### The KMP approach
 
 Even though the input can't be sorted, there are still ways to make substring search more efficient. One approach is to take advantage of repetitions that happen inside of the pattern: For instance, let's say we're looking for the pattern "abracadabra" inside of the long string.
 
@@ -151,7 +151,7 @@ In fact, if you take a look at examples demonstrating the KMP algorithm, pattern
 
 At the same time, this approach tends to increase the number of checks the algorithm has to perform on each iteration, which might just eliminate all the benefit from building this table depending on the text being searched, resulting in a worst-case scenario of O(m * n).
 
-## The Rabin-Karp way
+### The Rabin-Karp way
 
 Shifting away from nested loops, the [Rabin-Karp algorithm](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm) implements a **sliding window** constituted by the sum of character hashes compared to the sum of the pattern's character hashes, a technique also known as rolling hash function.
 
@@ -165,7 +165,7 @@ Make of that what you will, but I doubt this represents a major improvement - if
 
 If you're curious what it looks like, you can find [a JavaScript implementation of the Rabin-Karp algorithm here.](https://github.com/djktno/rabin-karp-js/blob/master/rk.js) 
 
-## The Boyer–Moore string-search algorithm
+### The Boyer–Moore string-search algorithm
 
 A way more successful and now widely used attempt to bring back things closer to O(n) time is [Boyer-Moore version of substring search](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm).
 
@@ -211,7 +211,7 @@ Here's a full [JavaScript implementation of the Boyer-Moore algorithm](https://g
 
 If you'd like to see it in action (algorithm POV, is that a thing?), go check out this [live demo](https://personal.utdallas.edu/~besp/demo/John2010/boyer-moore.htm).
 
-## 3S (Simple Substring Search)
+### 3S (Simple Substring Search)
 
 Having looked at all these complex alternatives, allow me to introduce the solution I came up with before looking at any of those.
 

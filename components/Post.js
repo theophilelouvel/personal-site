@@ -13,7 +13,7 @@ export default function Post({ content, frontMatter, slug }) {
                     {frontMatter.date}
                 </time>
             }
-            <h1 className="big-title dark:text-amber-600">{title(frontMatter.title, { special: specialTitle })}</h1>
+            <h2 className="big-title dark:text-amber-600">{title(frontMatter.title, { special: specialTitle })}</h2>
             {frontMatter.description && (
                 <p className="italic font-light text-lg dark:text-bluegray-200">{frontMatter.description}</p>
             )}

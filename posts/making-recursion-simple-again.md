@@ -24,7 +24,7 @@ Now that I got the hang of it, here is my attempt to explain recursion and make 
 All code examples are written in JavaScript, but bare in mind that recursion is a programming concept and is in no way language dependent.
 
 
-## To understand recursion, one must first understand recursion
+### To understand recursion, one must first understand recursion
 
 The first thing to understand is that recursion is nothing but a convenient syntax that allows for less verbose code in order to perform a given operation.
 
@@ -73,7 +73,7 @@ It seems logical, but this is the key to understand recursion: **Functions have 
 Now that you understand recursion, let’s try to understand recursion.
 
 
-## In the loop
+### In the loop
 
 So recursion is merely a way of taking advantage of functions’ operator precedence.
 
@@ -108,7 +108,7 @@ Things happen in the following order:
 And now the program is stuck in an "infinite" loop, because the function keeps calling itself, never hitting a limit or a return value.
 
 
-## The call stack
+### The call stack
 
 What happens behind the scenes is that all JavaScript operations are redirected towards a buffer (“The call stack”), which is nothing but a pile of operations to be executed.
 
@@ -139,7 +139,7 @@ Each time our function `myFunction()` calls itself, it adds a call onto the pile
 
 So, it’s an infinite loop of sorts, and it would keep printing forever, if it wasn’t for the call stack limit… Which is why the program stopped after printing 12267 on my end: The pile is deemed “full”, which is a safeguard to avoid overloading computers, which still have limited resources.
 
-## Base cases
+### Base cases
 
 But, most of the time, we don’t want to tell our computer to just run the program while it can. We need the program to run until it hits a limit fixed by us.
 
@@ -190,7 +190,7 @@ Again, this has to do with operator precedence: If you do so, the function will 
 
 In practice, the base case is almost always placed at the beginning of the function, checking for the condition before doing anything, or in other words, thinking before acting (unlike me).
 
-## Use cases
+### Use cases
 
 As you hopefully now understand, recursion is nothing but some handy syntax, that could easily be replaced with something else, like a for loop for instance. But in some cases, this syntax is so much less verbose that it’s the way to go.
 
