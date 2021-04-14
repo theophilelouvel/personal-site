@@ -5,6 +5,7 @@ import { getSortedPostsData } from 'lib/posts'
 import title from 'title'
 import specialTitle from 'utils/specialTitle'
 import { siteInfo } from 'utils/siteMetadata'
+import { format, parse } from "date-fns"
 
 export async function getStaticProps() {
 
@@ -45,8 +46,8 @@ export default function Index({ posts }) {
                     <div key={post.id} className="mb-5">
                         {post.data.date &&
                             <div>
-                                <time className="px-2.5 py-0.5 rounded text-xs font-medium bg-bluegray-100 text-gray-900 dark:bg-bluegray-700 dark:text-bluegray-200">
-                                    {post.data.date}
+                                <time dateTime={post.data.date} className="px-2.5 py-0.5 rounded text-xs font-medium bg-bluegray-100 text-gray-900 dark:bg-bluegray-700 dark:text-bluegray-200">
+                                    {format(parse(post.data.date, "yyyy-MM-dd", new Date()), "MMM do, yyyy")}
                                 </time>
                             </div>}
 

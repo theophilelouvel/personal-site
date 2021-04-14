@@ -1,3 +1,5 @@
+import { format, parse } from "date-fns"
+
 export default function Timeline({ milestones }) {
     return <>
 
@@ -29,7 +31,7 @@ export default function Timeline({ milestones }) {
                                             <path d="M 6 18 V 500" fill="none" strokeWidth="2" stroke="currentColor" className="text-gray-200"></path>
                                         </svg>
                                     )}
-                                    {m.date}
+                                    {format(parse(m.date, "yyyy-MM-dd", new Date()), "MMM d, yyyy")}
                                 </time>
                                 <p className="lg:col-start-3 lg:col-span-6 xl:col-span-7 ml-9 lg:ml-0 text-gray-900 dark:text-bluegray-100">
                                     {m.description}
