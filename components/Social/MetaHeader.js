@@ -25,8 +25,8 @@ export default function MetaHeader({ pageMeta }) {
                 <meta property="profile:username" content={siteInfo.username} />
             }
             {/* SEO description */
-                pageMeta.description &&
-                <meta name="description" content={pageMeta.description} />
+                // pageMeta.description &&
+                // <meta name="description" content={pageMeta.description} />
             }
             {
                 pageMeta.description &&
