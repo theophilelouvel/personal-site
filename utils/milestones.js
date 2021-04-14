@@ -13,7 +13,7 @@ export const milestones = [
     },
     {
         link: "/blog/blog-building-and-yak-shaving",
-        title: "theolouvel.io",
+        title: "theophilelouvel.tech",
         date: "2020-10-13",
         description: "To get myself acquainted with Next.js, I set out to build this blog. At the same time, I used it to experiment working with Sanity and its Groq query language, which is a breeze, even though I came back to bare markdown articles later on as it was kind of overkill for my purpose. Click to read more about how I built this blog!",
     },

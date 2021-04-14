@@ -1,4 +1,4 @@
-// import Link from 'next/link'
+import Link from 'next/link'
 import Layout from 'components/Layout'
 import MetaHeader from 'components/Social/MetaHeader'
 import { siteInfo } from 'utils/siteMetadata'
@@ -31,6 +31,12 @@ export default function TimelinePage() {
             <main>
                 <Timeline milestones={milestones} />
             </main>
+
+            <div className="flex justify-center my-16">
+                <Link href="/"><a className="link-color">
+                    ← Home
+            </a></Link>
+            </div>
 
         </Layout>
     </>
