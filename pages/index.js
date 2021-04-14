@@ -37,7 +37,7 @@ export default function Index({ posts }) {
         <MetaHeader pageMeta={pageMeta} />
         <Layout>
             <header>
-                <h2 className="text-3xl lg:text-4xl text-gray-900 dark:text-bluegray-200 font-light mb-5 md:mb-10 mt-5 md:mt-16">Blog Posts</h2>
+                <h2 className="text-3xl lg:text-4xl text-amber-600 font-light mb-5 md:mb-10 mt-5 md:mt-16">Blog Posts</h2>
             </header>
             <main>
                 {posts.map((post) => (
@@ -55,7 +55,7 @@ export default function Index({ posts }) {
                             className=""
                         >
                             <a className="">
-                                <h3 className="font-extrabold text-xl md:text-2xl lg:text-3xl text-amber-600">
+                                <h3 className="font-extrabold text-xl md:text-2xl lg:text-3xl text-bluegray-700 dark:text-bluegray-300 hover:text-amber-600 dark:hover:text-amber-600">
                                     {title(post.data.title, { special: specialTitle })}
                                 </h3>
                             </a>

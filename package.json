@@ -9,6 +9,7 @@
   "dependencies": {
     "@mapbox/rehype-prism": "^0.5.0",
     "@tippyjs/react": "^4.2.0",
+    "date-fns": "^2.21.0",
     "gray-matter": "^4.0.2",
     "highlight.js": "^10.4.0",
     "next": "latest",

@@ -1,11 +1,11 @@
 @tailwind base;
 
-@media screen and (min-width: 1268px) {
+/* @media screen and (min-width: 1268px) {
   html {
     margin-left: calc(100vw - 100%);
       margin-right: 0;
   }
-}
+} */
 
 .blur {
   filter: blur(8px);
@@ -78,7 +78,7 @@ body {
 }
 
 .markdown p {
-    @apply my-5 dark:text-bluegray-300
+    @apply my-5 dark:text-bluegray-200
 }
 
 .markdown pre > code {
@@ -90,7 +90,7 @@ body {
 }
 
 .markdown li > code {
-    @apply bg-bluegray-100 font-mono py-0.5 px-1.5 text-sm rounded inline-block
+    @apply bg-bluegray-100 dark:bg-bluegray-700 dark:text-bluegray-200 font-mono py-0.5 px-1.5 text-sm rounded inline-block
 }
 
 .markdown .remark-code-title {

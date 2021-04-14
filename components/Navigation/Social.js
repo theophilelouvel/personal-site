@@ -34,7 +34,7 @@ export default function Social() {
                 </a></Link>
             </div>
             <div className="flex flex-col text-center">
-                <h1 className="font-bold text-2xl text-gray-900 dark:text-bluegray-300">{siteInfo.author}</h1>
+                <h1 className="font-bold text-2xl text-gray-700 dark:text-bluegray-300">{siteInfo.author}</h1>
                 <p className="text-sm font-normal px-2 text-gray-900 dark:text-bluegray-300 mt-4">🔥 Learning one day at a time || Fullstack & backend development</p>
                 {/* <Tippy content="Click me 🔊">
                     <button className="focus:outline-none" onClick={playAudio}>

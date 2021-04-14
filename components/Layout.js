@@ -36,7 +36,7 @@ export default function Layout({ children, home }) {
                                     viewBox="0 0 24 24"
                                     fill="currentColor"
                                     stroke="currentColor"
-                                    className="h-4 w-4 text-bluegray-50"
+                                    className="h-4 w-4 text-bluegray-50 transition duration-1000"
                                 >
                                     {theme === 'dark' ? (
                                         <path

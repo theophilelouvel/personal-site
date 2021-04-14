@@ -22,13 +22,15 @@ export default function About() {
         <MetaHeader pageMeta={pageMeta} />
         <Layout>
             <header className="mb-8 md:mb-10 lg:mb-12 mt-5 md:mt-16">
-                <h2 className="text-3xl lg:text-4xl text-gray-900 dark:text-bluegray-200 font-light mb-5 md:mb-10 mt-5 md:mt-16">About</h2>
+                <h2 className="text-3xl lg:text-4xl text-amber-600 font-light mb-5 md:mb-10 mt-5 md:mt-16">About</h2>
             </header>
 
             <main className="markdown">
                 <p>👋 Hi, I'm Théo, a <strong>full-stack / backend developer</strong> from Paris, France.</p>
 
                 <p>I'm widely interested in systems programming, backend development and web development in general.</p>
+
+                <p>This is my tech blog. <a href="https://theolouvel.medium.com/">I also write on Medium</a> on other topics from time to time.</p>
 
                 {/* <p>I graduated as a jurist in International Business Law, received officer training in the French military and worked as a linguist until '20.</p>
 
