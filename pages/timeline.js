@@ -28,6 +28,8 @@ export default function TimelinePage() {
                 <h2 className="text-3xl lg:text-4xl text-amber-600 font-light mb-5 md:mb-10 mt-5 md:mt-16">Timeline</h2>
             </header>
 
+            <p className="dark:text-bluegray-200 mb-5">Below are some of the milestones in my journey as a developer. Click the the card to view deployed projects 👇</p>
+
             <main>
                 <Timeline milestones={milestones} />
             </main>

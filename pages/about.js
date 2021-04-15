@@ -84,9 +84,6 @@ export default function About() {
                         ]} />
                 </section>
 
-
-
-
             </main>
 
             <div className="flex justify-center my-16">
