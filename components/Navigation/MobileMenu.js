@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import NavLinks from './NavLinks'
 import SocialIcons from './SocialIcons'
 import { FiMenu, FiX } from 'react-icons/fi'
-import Image from 'next/image'
 import { siteInfo } from 'utils/siteMetadata'
 import { useTheme } from 'next-themes';
 
@@ -19,7 +18,7 @@ export default function MobileMenu() {
 
     return (
         <>
-            <div className="z-30 overflow-hidden bg-blur bg-white dark:bg-bluegray-900 bg-opacity-70 md:hidden fixed top-0 flex flex-row items-center justify-between p-6 w-screen h-20">
+            <div className="z-30 overflow-hidden bg-blur bg-opacity-70 md:hidden fixed top-0 flex flex-row items-center justify-between p-6 w-screen h-20">
                 <div className="flex flex-1 items-center">
                     <button
                         aria-label="Toggle Dark Mode"

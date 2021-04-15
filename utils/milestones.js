@@ -42,6 +42,12 @@ export const milestones = [
         description: "The 2020 pandemic was the perfect occasion to make a switch I had been considering for some time already. I love languages, but unlike spoken languages, computer languages do scale!",
     },
     {
+        link: "https://theolouvel.medium.com/life-is-nothing-but-a-bike-ride-7da49315ea06",
+        title: "Paris -> St Petersburg on a bike",
+        date: "2014-8-10",
+        description: "An incredible adventure that took me from Paris, France to St. Petersburg, Russia. Click to read the article on Medium! (no paywalls, don't worry)"
+    },
+    {
         link: "#",
         title: "Graduated from law school",
         date: "2013-10-08",
@@ -63,6 +69,6 @@ export const milestones = [
         link: "#",
         title: "First program in Basic",
         date: "2004-09-01",
-        description: "The very first program I ever wrote was in Basic, on my old high school calculator Graph 35+. Full disclosure: I had no idea what I was doing, I just really wanted to play Snake on the way home!"
+        description: "The very first program I ever wrote was in Basic, on my old high school calculator Casio Graph 35+. Full disclosure: I had no idea what I was doing, I just really wanted to play Snake on the way home."
     }
 ];

@@ -22,7 +22,7 @@ export default function Layout({ children, home }) {
                     <Sidebar />
                     <MobileMenu />
                 </div>
-                <div className="mt-20 md:mt-0 md:ml-64 px-3 md:px-6 lg:px-12 xl:px-24 pb-12 md:pb-0 overflow-y-auto md:min-h-screen">
+                <div className="pt-20 md:pt-0 md:ml-64 px-3 md:px-6 lg:px-12 xl:px-24 pb-12 md:pb-0 overflow-y-auto md:min-h-screen">
                     <div className="hidden md:block float-right mt-16">
                         <button
                             aria-label="Toggle Dark Mode"
