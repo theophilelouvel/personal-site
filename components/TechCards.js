@@ -2,7 +2,7 @@ export default function TechCards({ techs }) {
 
     return <>
 
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap justify-left">
 
             {techs &&
                 techs.map(({ name, src, href }) => (

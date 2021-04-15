@@ -28,43 +28,65 @@ export default function About() {
             <main className="markdown">
                 <p>👋 Hi, I'm Théo, a <strong>full-stack / backend developer</strong> from Paris, France.</p>
 
-                <p>I'm widely interested in systems programming, backend development and web development in general.</p>
+                <p>Below is a non-exhaustive list of some tools and languages I have worked with:</p>
 
-                {/* <p>I graduated as a jurist in International Business Law, received officer training in the French military and worked as a linguist until '20.</p>
-
-                <p>Despite my love for languages, being able to ask for more cheese in five different languages felt redundant after a while...</p>
-
-                <p>Programming conciliates my passion for strategic thinking, reverse engineering and hands-on learning.</p> */}
-
-                <p>I speak French, English, Russian and I code in <strong>Rust & JavaScript</strong>. Below is a non-exhaustive list of some tools and languages I have worked with:</p>
-
-                {/* <p><em> P.S.: If you wonder what my name sounds like, just click on it's phonetic transcription (desktop only)! </em></p> */}
-
-                {/* <h3 className="font-semibold text-xl lg:text-3xl text-amber-600">My Tech Stack</h3> */}
-
-                <TechCards
-                    techs={[
+                <section id="languages">
+                    <h3 className="text-gray-900 hover:text-amber-600 dark:text-bluegray-300 font-semibold text-lg lg:text-xl mb-4 mt-8"><a href="#languages">Languages</a></h3>
+                    <TechCards techs={[
                         { name: 'Rust', src: '/img/techs/rust.svg', href: 'https://www.rust-lang.org/' },
                         { name: 'TypeScript', src: '/img/techs/typescript.svg', href: 'https://www.typescriptlang.org/' },
                         { name: 'JavaScript', src: '/img/techs/javascript.svg', href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
                         { name: 'Java', src: '/img/techs/java.svg', href: 'https://www.java.com/' },
-                        { name: 'Firebase', src: '/img/techs/firebase.svg', href: 'https://firebase.google.com/' },
-                        { name: 'MongoDB', src: '/img/techs/mongodb.svg', href: 'https://www.mongodb.com/' },
-                        { name: 'Node.js', src: '/img/techs/nodejs.svg', href: 'https://nodejs.org/en/' },
-                        { name: 'Sanity', src: '/img/techs/sanity.png', href: 'https://www.sanity.io/' },
-                        { name: 'React', src: '/img/techs/react.svg', href: 'https://reactjs.org/' },
-                        { name: 'Next.js', src: '/img/techs/nextjs.svg', href: 'https://nextjs.org/' },
-                        { name: 'Redux', src: '/img/techs/redux.svg', href: 'https://redux.js.org/' },
-                        { name: 'Express', src: '/img/techs/express.svg', href: 'http://expressjs.com/' },
-                        { name: 'Git', src: '/img/techs/git.svg', href: 'https://git-scm.com/' },
-                        { name: 'GitHub', src: '/img/techs/github.svg', href: 'https://github.com/' },
-                        { name: 'Webpack', src: '/img/techs/webpack.svg', href: 'https://webpack.js.org/' },
-                        { name: 'Jest', src: '/img/techs/jest.svg', href: 'https://jestjs.io/' },
                         { name: 'CSS', src: '/img/techs/css.svg', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
                         { name: 'HTML', src: '/img/techs/html.svg', href: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
-                        { name: 'Tailwind', src: '/img/techs/tailwindcss.svg', href: 'https://tailwindcss.com/' },
+                    ]} />
+                </section>
+
+                <section id="frameworks">
+                    <h3 className="text-gray-900 hover:text-amber-600 dark:text-bluegray-300 font-semibold text-lg lg:text-xl mb-4 mt-8"><a href="#frameworks">Frameworks</a></h3>
+                    <TechCards techs={[
+                        { name: 'Node.js', src: '/img/techs/nodejs.svg', href: 'https://nodejs.org/en/' },
+                        { name: 'React', src: '/img/techs/react.svg', href: 'https://reactjs.org/' },
+                        { name: 'Next.js', src: '/img/techs/nextjs.svg', href: 'https://nextjs.org/' },
+                        { name: 'Express', src: '/img/techs/express.svg', href: 'http://expressjs.com/' },
+                        { name: 'Jest', src: '/img/techs/jest.svg', href: 'https://jestjs.io/' },
                         { name: 'Electron', src: '/img/techs/electron.svg', href: 'https://www.electronjs.org/' },
                     ]} />
+                </section>
+
+                <section id="databases">
+                    <h3 className="text-gray-900 hover:text-amber-600 dark:text-bluegray-300 font-semibold text-lg lg:text-xl mb-4 mt-8"><a href="#databases">Databases & State Management</a></h3>
+                    <TechCards techs={[
+                        { name: 'Firebase', src: '/img/techs/firebase.svg', href: 'https://firebase.google.com/' },
+                        { name: 'MongoDB', src: '/img/techs/mongodb.svg', href: 'https://www.mongodb.com/' },
+                        { name: 'Sanity', src: '/img/techs/sanity.png', href: 'https://www.sanity.io/' },
+                        { name: 'Redux', src: '/img/techs/redux.svg', href: 'https://redux.js.org/' },
+                    ]} />
+                </section>
+
+                <section id="platforms">
+                    <h3 className="text-gray-900 hover:text-amber-600 dark:text-bluegray-300 font-semibold text-lg lg:text-xl mb-4 mt-8"><a href="#platforms">Deployment platforms & Project Management</a></h3>
+                    <TechCards techs={[
+                        { name: "Heroku", src: "/img/techs/heroku.svg", href: "https://www.heroku.com/" },
+                        { name: "Vercel", src: "/img/techs/vercel.svg", href: "https://vercel.com/" },
+                        { name: 'Git', src: '/img/techs/git.svg', href: 'https://git-scm.com/' },
+                        { name: 'GitHub', src: '/img/techs/github.svg', href: 'https://github.com/' },
+                    ]} />
+                </section>
+
+                <section id="tools">
+                    <h3 className="text-gray-900 hover:text-amber-600 dark:text-bluegray-300 font-semibold text-lg lg:text-xl mb-4 mt-8"><a href="#tools">Tools</a></h3>
+                    <TechCards
+                        techs={[
+                            { name: 'Webpack', src: '/img/techs/webpack.svg', href: 'https://webpack.js.org/' },
+                            { name: 'Tailwind', src: '/img/techs/tailwindcss.svg', href: 'https://tailwindcss.com/' },
+
+                        ]} />
+                </section>
+
+
+
+
             </main>
 
             <div className="flex justify-center my-16">
