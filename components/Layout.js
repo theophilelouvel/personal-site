@@ -27,7 +27,7 @@ export default function Layout({ children, home }) {
                         <button
                             aria-label="Toggle Dark Mode"
                             type="button"
-                            className="bg-amber-600 rounded p-3 h-10 w-10 focus:outline-none"
+                            className="bg-amber-600 rounded p-3 h-10 w-10 focus:outline-none md:transform md:hover:scale-95 md:transition duration-300"
                             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                         >
                             {mounted && (
@@ -36,7 +36,7 @@ export default function Layout({ children, home }) {
                                     viewBox="0 0 24 24"
                                     fill="currentColor"
                                     stroke="currentColor"
-                                    className="h-4 w-4 text-bluegray-50 transition duration-1000"
+                                    className="h-4 w-4 text-bluegray-50"
                                 >
                                     {theme === 'dark' ? (
                                         <path
