@@ -16,7 +16,7 @@ export default function Layout({ children, home }) {
     useEffect(() => setMounted(true), []);
 
     return <>
-        <div className="bg-white dark:bg-gray-900">
+        <div className="">
             <div className="max-w-screen-xl md:divide-x mx-auto dark:divide-amber-600">
                 <div>
                     <Sidebar />

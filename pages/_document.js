@@ -3,10 +3,10 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 export default class MyDocument extends Document {
     render() {
         return (
-            <Html lang="en" class="light" color-scheme="light">
+            <Html lang="en" class="light">
                 <Head>
                 </Head>
-                <body>
+                <body className="bg-white dark:bg-bluegray-900">
                     <Main />
                     <NextScript />
                 </body>
