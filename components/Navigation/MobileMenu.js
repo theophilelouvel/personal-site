@@ -19,7 +19,7 @@ export default function MobileMenu() {
 
     return (
         <>
-            <div className="z-30 overflow-hidden bg-blur bg-white dark:bg-gray-900 bg-opacity-70 md:hidden fixed top-0 flex flex-row items-center justify-between p-6 w-screen h-20">
+            <div className="z-30 overflow-hidden bg-blur bg-white dark:bg-bluegray-900 bg-opacity-70 md:hidden fixed top-0 flex flex-row items-center justify-between p-6 w-screen h-20">
                 <div className="flex flex-1 items-center">
                     <button
                         aria-label="Toggle Dark Mode"
@@ -64,7 +64,7 @@ export default function MobileMenu() {
                 </button>
             </div >
             {isOpen && (
-                <div className="z-50 h-screen w-screen bg-blur bg-white dark:bg-gray-900 bg-opacity-70 flex flex-col items-center fixed top-0 pt-10 md:hidden">
+                <div className="z-50 h-screen w-screen bg-blur bg-opacity-70 flex flex-col items-center fixed top-0 pt-10 md:hidden">
                     <button onClick={handleToggle} className="btn-nav fixed top-4 right-6">
                         <FiX size="30px" />
                     </button>
