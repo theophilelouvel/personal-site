@@ -26,7 +26,7 @@ export default function About() {
             </header>
 
             <main className="markdown">
-                <p>👋 Hi, I'm Théo, a <strong>full-stack / backend developer</strong> from Paris, France.</p>
+                <p>👋 Hi, I'm Théo, a <strong>full stack developer</strong> from Paris, France.</p>
 
                 <p>Below is a non-exhaustive list of some tools and languages I have worked with:</p>
 

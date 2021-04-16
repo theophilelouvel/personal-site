@@ -1,5 +1,6 @@
 @tailwind base;
-
+@tailwind utilities;
+@tailwind components;
 /* @media screen and (min-width: 1268px) {
   html {
     margin-left: calc(100vw - 100%);
@@ -35,16 +36,12 @@
   display: none;
 } */
 
-/* Start purging... */
-@tailwind components;
-/* Stop purging. */
-
-html,
+/* html,
 body {
   @apply bg-white dark:bg-gray-900;
-}
+} */
 
-/* Write your own custom component styles here */
+@layer base {
 .btn {
   @apply px-4 py-2 font-bold text-white rounded;
 }
@@ -108,11 +105,5 @@ body {
 .link-color {
     @apply text-amber-600
 }
-
+}
 /* Solution by Adam for posts: https://github.com/tailwindlabs/discuss/issues/243 */
-
-/* Start purging... */
-@tailwind utilities;
-/* Stop purging. */
-
-/* Your own custom utilities */
