@@ -2,8 +2,8 @@ import { FiTwitter, FiYoutube, FiGithub, FiMail, FiLinkedin, FiRss } from 'react
 import { SiStackoverflow } from "react-icons/si";
 
 const siteInfo = {
-    title: "Théo Louvel - Developer",
-    description: "Software Engineer with a focus on Web Development from Paris, France.",
+    title: "Théo Louvel - Full Stack Developer",
+    description: "Web Developer from Paris, France (Rust, JavaScript, TypeScript).",
     author: "Théo Louvel",
     pronunciation: "te.ɔ. luvɛl",
     url: 'https://theophilelouvel.tech',

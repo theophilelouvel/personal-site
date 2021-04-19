@@ -13,8 +13,7 @@ export default function Navigation({ handleToggle }) {
                 <div key={`${href}${label}`} className=" mt-2 md:mt-4 w-screen md:w-full">
                     <Link href={href}>
                         <a onClick={handleToggle} className={router.asPath === href ? "btn-nav md:text-amber-600" : "btn-nav md:hover:text-amber-600"}>
-                            ::{label}::
-                            {/* &#60;{label} /&#62; */}
+                            {label}
                         </a>
                     </Link>
                 </div>
