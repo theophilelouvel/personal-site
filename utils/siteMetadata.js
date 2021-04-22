@@ -8,10 +8,10 @@ const siteInfo = {
     pronunciation: "te.ɔ. luvɛl",
     url: 'https://theophilelouvel.tech',
     favicon: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 100%22><text y=%22.9em%22 font-size=%2290%22>🦀</text></svg>",
-    username: "flowsn4ke",
+    username: "theo_louvel",
     twitter: {
         organisation: undefined,
-        author: "flowsn4ke"
+        author: "theo_louvel"
     },
     socialAnalytics: {
         facebookAppId: undefined,
@@ -29,10 +29,10 @@ const navLinks = [
 ]
 
 const socialLinks = [
-    { name: 'twitter', href: "https://twitter.com/flowsn4ke", icon: <FiTwitter /> },
+    { name: 'twitter', href: "https://twitter.com/theo_louvel", icon: <FiTwitter /> },
     // { name: 'stackoverflow', href: "https://stackoverflow.com/users/14192686/th%c3%a9ophile-louvel", icon: <SiStackoverflow /> },
     // { name: 'youtube', href: 'https://www.youtube.com/channel/UCco896WsL_UlJeOecstyRAA', icon: <FiYoutube /> },
-    { name: 'github', href: "https://github.com/flowsn4ke", icon: <FiGithub /> },
+    { name: 'github', href: "https://github.com/theolouvel", icon: <FiGithub /> },
     { name: 'linkedin', href: "www.linkedin.com/in/theolouvel", icon: <FiLinkedin /> },
     // { name: 'mail', href: 'mailto:louveltheophile@gmail.com', icon: <FiMail /> },
     { name: 'rss', href: siteInfo.url + '/rss.xml', icon: <FiRss /> },
