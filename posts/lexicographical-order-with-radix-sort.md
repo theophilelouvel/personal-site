@@ -1,8 +1,8 @@
 ---
 title: Lexicographical order with radix sort
 description: Because why not?
-date: '2021-03-15'
-updated: '2021-03-15'
+date: '2021-04-23'
+updated: '2021-04-23'
 cover: r6mBXuHnxBk
 ---
 
