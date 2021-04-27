@@ -219,6 +219,6 @@ I'm actually glad I did all that, as I now feel even more comfortable with those
 
 As always, testing is the only way to know for sure what works and what doesn't!
 
-[The source code for this blog is here](https://github.com/theophilelouvel/personal-site) if you want to peek into it!
+[The source code for this blog is here](https://github.com/theolouvel/personal-site) if you want to peek into it!
  
 *P.S.: I'm sorry I couldn't provide code examples for all the solutions mentioned earlier, but as I write this article many files have seen themselves out into the trash, so there's that. You could DM me on twitter though and I could point you to the documentation I found on the subject.*
