@@ -80,7 +80,7 @@ export default function About() {
                         techs={[
                             { name: 'Webpack', src: '/img/techs/webpack.svg', href: 'https://webpack.js.org/' },
                             { name: 'Tailwind', src: '/img/techs/tailwindcss.svg', href: 'https://tailwindcss.com/' },
-
+                            { name: 'Postman', src: '/img/techs/postman.svg', href: 'https://www.postman.com/' },
                         ]} />
                 </section>
 

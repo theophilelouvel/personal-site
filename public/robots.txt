@@ -1,4 +1,4 @@
-Sitemap: https://theophilelouvel.tech/sitemap.xml
+Sitemap: https://theolouvel.dev/sitemap.xml
 
 User-agent: *
 
