@@ -4,29 +4,17 @@ import SocialIcons from './SocialIcons'
 import { FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi'
 import { siteInfo } from 'utils/siteMetadata'
 import { useTheme } from 'next-themes';
+import ThemeToggle from "components/ThemeToggle"
 
 export default function MobileMenu() {
-	const [mounted, setMounted] = useState(false);
 	const [isOpen, setIsOpen] = useState(false)
-
-	const { theme, setTheme } = useTheme();
-
-	useEffect(() => setMounted(true), []);
-
 	const handleToggle = () => setIsOpen(!isOpen)
 
 	return (
 		<>
 			<div className="z-30 overflow-hidden bg-blur firefox:bg-white dark:firefox:bg-bluegray-900 firefox:bg-opacity-90 dark:firefox:bg-opacity-80 md:hidden fixed top-0 flex flex-row items-center justify-between p-6 w-screen h-20">
 				<div className="flex flex-1 items-center">
-					<button
-						aria-label="Toggle Dark Mode"
-						type="button"
-						className="bg-amber-600 rounded p-3 h-10 w-10 focus:outline-none flex items-center justify-center text-center"
-						onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-					>
-						{mounted && theme === 'dark' ? <FiSun size="22" className="text-bluegray-100" /> : <FiMoon size="22" className="text-bluegray-100" />}
-					</button>
+					<ThemeToggle />
 					<div className="text-left pl-3">
 						<h1 className="font-bold text-xl text-gray-900 no-underline dark:text-bluegray-300">
 							{siteInfo.author}
