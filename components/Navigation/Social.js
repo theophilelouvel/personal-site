@@ -22,14 +22,16 @@ export default function Social() {
 		<div>
 			<div className="hidden md:flex mt-16 justify-center mb-5">
 				<Link href="/"><a>
-					<div className="bg-amber-600 w-40 h-40 rounded-full md:flex justify-center items-center">
-						<Image
-							src="/img/avatar.jpg"
-							alt="Théo Louvel's Portrait"
-							className="w-36 rounded-full"
-							width={145}
-							height={145}
-						/>
+					<div className="bg-gradient-to-br from-orange-500 to-orange-600 w-40 h-40 rounded-full flex flex-col text-center justify-center items-center">
+						<div className="bg-white dark:bg-bluegray-900 w-32 h-32 rounded-full flex flex-col text-center justify-center items-center">
+							<Image
+								src="/img/avatar.jpg"
+								alt="Théo Louvel's Portrait"
+								className="w-28 rounded-full"
+								width={100}
+								height={100}
+							/>
+						</div>
 					</div>
 				</a></Link>
 			</div>

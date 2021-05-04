@@ -9,7 +9,7 @@ export const milestones = [
 		link: "https://dictionnaire-turc-francais.vercel.app/",
 		title: "Turkish -> French Dictionary App",
 		date: "2021-03-16",
-		description: "While I was living in Turkey a few years ago, I started to write a dictionnary for myself as I couldn't find a decent one. The project grew and grew, but it's not until recently that I acquired the necessary skill to make it available for others. It's now a tiny React app styled with TailwindCSS deployed on Vercel! There are many more entries to add, but the functionality's here! It supports fuzzy search and fetches definitions based on how much they share with the query string.",
+		description: "While I was living in Turkey a few years ago, I started to write a dictionnary for myself as I couldn't find a decent one. The project grew and grew, but it's not until recently that I found the time and energy to make it available for others. It's now a tiny React app styled with TailwindCSS deployed on Vercel! There are many more entries to add, but the functionality's here! It also implements fuzzy search, fetching definitions based on how much they have in common with the query string.",
 	},
 	{
 		link: "https://deus-foto.vercel.app/",
