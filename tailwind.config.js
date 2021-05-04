@@ -34,7 +34,9 @@ module.exports = {
 		},
 	},
 	variants: {
-		extend: {},
+		extend: {
+			scale: ['active', 'hover'],
+		},
 	},
 	plugins: [
 		plugin(function ({ addVariant, e, postcss }) {

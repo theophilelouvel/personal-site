@@ -22,10 +22,10 @@ export default function MobileMenu() {
 					<button
 						aria-label="Toggle Dark Mode"
 						type="button"
-						className="bg-amber-600 rounded p-3 h-10 w-10 focus:outline-none flex items-center justify-center"
+						className="bg-amber-600 rounded p-3 h-10 w-10 focus:outline-none flex items-center justify-center text-center"
 						onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
 					>
-						{mounted && theme === 'dark' ? <FiSun size="22" className="text-bluegray-200 flex-shrink-0" /> : <FiMoon size="22" className="text-bluegray-200 flex-shrink-0" />}
+						{mounted && theme === 'dark' ? <FiSun size="22" className="text-bluegray-100" /> : <FiMoon size="22" className="text-bluegray-100" />}
 					</button>
 					<div className="text-left pl-3">
 						<h1 className="font-bold text-xl text-gray-900 no-underline dark:text-bluegray-300">
