@@ -1,5 +1,5 @@
 import { FiTwitter, FiYoutube, FiGithub, FiMail, FiLinkedin, FiRss } from 'react-icons/fi'
-import { SiStackoverflow } from "react-icons/si";
+// import { SiStackoverflow } from "react-icons/si";
 
 const siteInfo = {
 	title: "Théo Louvel - Full Stack Developer",
