@@ -5,6 +5,7 @@ import title from 'title'
 import specialTitle from 'utils/specialTitle'
 import { siteInfo } from 'utils/siteMetadata'
 import { format, parse } from "date-fns"
+import { motion } from 'framer-motion'
 
 export async function getStaticProps() {
 	const posts = await getSortedPostsData()
@@ -36,7 +37,11 @@ export default function Index({ posts }) {
 			<h2 className="text-3xl lg:text-4xl text-amber-600 font-light mb-5 md:mb-10 mt-5 md:mt-16">Blog Posts</h2>
 			<p className="dark:text-bluegray-200 mb-5">👋 Hi, I'm Théo, a <strong>full stack developer</strong> from Paris, France. This is my tech blog. <a target="_blank" href="https://theolouvel.medium.com/" className="text-amber-600">I also write on Medium</a> on other topics from time to time. I mostly speak French, English, Russian, <strong>Rust & JavaScript.</strong></p>
 		</header>
-		<main>
+		<motion.main
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+		>
 			{posts.map((post) => (
 				<div key={post.id} className="mb-5">
 					{post.data.date &&
@@ -62,7 +67,7 @@ export default function Index({ posts }) {
 					}
 				</div>
 			))}
-		</main>
+		</motion.main>
 	</>
 }
 

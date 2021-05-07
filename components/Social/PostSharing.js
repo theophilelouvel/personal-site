@@ -10,73 +10,72 @@ import { EmailShareButton, FacebookShareButton, LinkedinShareButton, TwitterShar
 
 export default function PostSharing({ slug, title }) {
 
-    const iconStyles = "text-coolgray-700 hover:text-amber-600 dark:text-bluegray-400"
-    const iconSize = 20
-    const iconWrapper = "mr-8 focus:outline-none"
+	const iconStyles = "text-coolgray-700 hover:text-amber-600 dark:text-bluegray-400"
+	const iconSize = 20
+	const iconWrapper = "mr-8 focus:outline-none"
 
-    const postURL = siteInfo.url + '/blog/' + slug
+	const postURL = siteInfo.url + '/blog/' + slug
 
-    useEffect(() => {
+	useEffect(() => {
+		document.querySelector(`#copy-button`).addEventListener('click', e => {
+			e.preventDefault()
+			copyToClipboard(postURL)
+		})
 
-        document.querySelector(`#copy-button`).addEventListener('click', (e) => {
-            e.preventDefault()
-            copyToClipboard(postURL)
-        })
+		return () => document.querySelector(`#copy-button`).removeEventListener('click', (e) => { })
 
-        return () => document.querySelector(`#copy-button`).removeEventListener('click', (e) => { })
+	}, [])
 
-    }, [])
+	return <>
+		<div className="flex items-baseline">
 
-    return <>
-        <div className="flex items-baseline">
-
-            {/* <Tippy content="Still under development..." trigger={"click"}>
+			{/* <Tippy content="Still under development..." trigger={"click"}>
                 <button className={iconWrapper}>
                     <FiDownload size={iconSize} className={iconStyles} />
                 </button>
             </Tippy> */}
 
-            <TwitterShareButton
-                via={siteInfo.twitter.author}
-                title={title}
-                url={postURL}
-                hashtags={['javascript', 'webdevelopment']}
-                className={iconWrapper}
-            >
-                <FiTwitter size={iconSize} className={iconStyles} />
-            </TwitterShareButton>
+			<TwitterShareButton
+				via={siteInfo.twitter.author}
+				title={title}
+				url={postURL}
+				// hashtags={['javascript', 'webdevelopment']}
+				className={iconWrapper}
+			>
+				<FiTwitter size={iconSize} className={iconStyles} />
+			</TwitterShareButton>
 
-            <FacebookShareButton
-                quote={title}
-                url={postURL}
-                className={iconWrapper}
-            >
-                <FiFacebook size={iconSize} className={iconStyles} />
-            </FacebookShareButton>
+			<FacebookShareButton
+				quote={title}
+				url={postURL}
+				className={iconWrapper}
+			>
+				<FiFacebook size={iconSize} className={iconStyles} />
+			</FacebookShareButton>
 
-            <LinkedinShareButton
-                title={title}
-                url={postURL}
-                className={iconWrapper}
-            >
-                <FiLinkedin size={iconSize} className={iconStyles} />
-            </LinkedinShareButton>
+			<LinkedinShareButton
+				title={title}
+				url={postURL}
+				className={iconWrapper}
+			>
+				<FiLinkedin size={iconSize} className={iconStyles} />
+			</LinkedinShareButton>
 
-            <EmailShareButton
-                quote={title}
-                url={postURL}
-                hashtag={'#' + 'javascript'}
-                className={iconWrapper}
-            >
-                <FiMail size={iconSize} className={iconStyles} />
-            </EmailShareButton>
+			<EmailShareButton
+				quote={title}
+				url={postURL}
+				// hashtag={'#' + 'javascript'}
+				className={iconWrapper}
+			>
+				<FiMail size={iconSize} className={iconStyles} />
+			</EmailShareButton>
 
-            <Tippy content="Copied ❤" trigger={"click"}>
-                <button id="copy-button" className="cursor-pointer focus:outline-none">
-                    <FiLink size={iconSize} className={iconStyles} />
-                </button>
-            </Tippy>
+			<Tippy content="Copied ❤" trigger={"click"}>
+				<button id="copy-button" className="cursor-pointer focus:outline-none">
+					<FiLink size={iconSize} className={iconStyles} />
+				</button>
+			</Tippy>
 
-        </div>
-    </>
+		</div>
+	</>
 }

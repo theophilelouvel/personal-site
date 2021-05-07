@@ -32,11 +32,6 @@ module.exports = {
 			pink: colors.pink,
 			rose: colors.rose
 		},
-		extend: {
-			spacing: {
-				'38': '149px'
-			}
-		}
 	},
 	variants: {
 		extend: {

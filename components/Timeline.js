@@ -8,7 +8,7 @@ export default function Timeline({ milestones }) {
 				milestones.map((m, i) => (
 					<li key={"milestone_" + i}>
 						<article className="md:hover:bg-white rounded-xl md:dark:hover:bg-bluegray-700">
-							<a href={m.link} target={m.link !== "#" ? "_blank" : "_self"} className="grid lg:grid-cols-8 xl:grid-cols-9 items-start relative rounded-xl p-3 sm:p-5 xl:p-6 overflow-hidden ">
+							<a href={m.link} target={m.link !== "" ? "_blank" : "_self"} className="grid lg:grid-cols-8 xl:grid-cols-9 items-start relative rounded-xl p-3 sm:p-5 xl:p-6 overflow-hidden ">
 								<h3 className="font-semibold text-gray-900 lg:col-start-3 lg:col-span-6 xl:col-start-3 xl:col-span-7 mb-1 ml-9 lg:ml-0 dark:text-bluegray-300">
 									{m.title}
 								</h3>

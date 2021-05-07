@@ -6,6 +6,12 @@ export const milestones = [
 	//     description: ""
 	// },
 	{
+		link: "https://feedbase.dev/",
+		title: "feedbase.dev",
+		date: "2021-05-04",
+		description: "Feedbase is meant as a simple way to add customer reviews to product pages through an easy to navigate GUI. It's open source, built with Next.js, Firebase, Tailwind and Stripe. It's in an early MVP stage, but feel free to try it out! A word of caution, it's all in French :)"
+	},
+	{
 		link: "https://dictionnaire-turc-francais.vercel.app/",
 		title: "Turkish -> French Dictionary App",
 		date: "2021-03-16",

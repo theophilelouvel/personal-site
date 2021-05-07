@@ -4,23 +4,22 @@ import { navLinks } from 'utils/siteMetadata'
 
 export default function Navigation({ handleToggle }) {
 
-    const router = useRouter()
+	const router = useRouter()
+	return (
+		<div className="flex flex-col md:h-full mx-4 mt-4 md:mt-6">
 
-    return (
-        <div className="flex flex-col md:h-full mx-4 mt-4 md:mt-6 overflow-y-auto">
+			{navLinks.map(({ href, label }) => (
+				<div key={`${href}${label}`} className=" mt-2 md:mt-4">
+					<Link href={href}>
+						<a onClick={handleToggle} className="btn-nav md:hover:text-amber-600 dark:text-amber-600 md:dark:text-bluegray-300 click-bounce">
+							{label}
+						</a>
+					</Link>
+				</div>
+			))}
 
-            {navLinks.map(({ href, label }) => (
-                <div key={`${href}${label}`} className=" mt-2 md:mt-4 w-screen md:w-full">
-                    <Link href={href}>
-                        <a onClick={handleToggle} className={router.asPath === href ? "btn-nav md:text-amber-600" : "btn-nav md:hover:text-amber-600"}>
-                            {label}
-                        </a>
-                    </Link>
-                </div>
-            ))}
-
-        </div >
-    )
+		</div >
+	)
 }
 
 // Animation: md:transform md:hover:scale-95 md:transition duration-300

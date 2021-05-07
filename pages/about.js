@@ -2,6 +2,7 @@ import Link from 'next/link'
 import MetaHeader from 'components/Social/MetaHeader'
 import { siteInfo } from 'utils/siteMetadata'
 import TechCards from 'components/TechCards'
+import { motion } from 'framer-motion'
 
 export default function About() {
 
@@ -23,7 +24,11 @@ export default function About() {
 			<h2 className="text-3xl lg:text-4xl text-amber-600 font-light mb-5 md:mb-10 mt-5 md:mt-16">About</h2>
 		</header>
 
-		<main className="markdown">
+		<motion.main
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			className="markdown">
 			<p>👋 Hi, I'm Théo, a <strong>full stack developer</strong> from Paris, France.</p>
 
 			<p>Below is a non-exhaustive list of some tools and languages I have worked with:</p>
@@ -32,7 +37,7 @@ export default function About() {
 				<h3 className="text-gray-900 hover:text-amber-600 dark:text-bluegray-300 font-semibold text-lg lg:text-xl mb-4 mt-8"><a href="#languages">Languages</a></h3>
 				<TechCards techs={[
 					{ name: 'Rust', src: '/img/techs/rust.svg', href: 'https://www.rust-lang.org/' },
-					{ name: 'TypeScript', src: '/img/techs/typescript.svg', href: 'https://www.typescriptlang.org/' },
+					// { name: 'TypeScript', src: '/img/techs/typescript.svg', href: 'https://www.typescriptlang.org/' },
 					{ name: 'JavaScript', src: '/img/techs/javascript.svg', href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
 					{ name: 'Java', src: '/img/techs/java.svg', href: 'https://www.java.com/' },
 					{ name: 'CSS', src: '/img/techs/css.svg', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
@@ -83,12 +88,12 @@ export default function About() {
 					]} />
 			</section>
 
-		</main>
-
-		<div className="flex justify-center my-16">
-			<Link href="/"><a className="link-color">
-				← Home
+			<div className="flex justify-center my-16">
+				<Link href="/"><a className="link-color">
+					← Home
             </a></Link>
-		</div>
+			</div>
+		</motion.main>
+
 	</>
 }

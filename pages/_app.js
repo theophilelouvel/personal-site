@@ -1,4 +1,4 @@
-import 'styles/index.css'
+import 'tailwind.css'
 import 'highlight.js/styles/nord.css'
 import "nprogress/nprogress.css"
 import 'tippy.js/dist/tippy.css'
