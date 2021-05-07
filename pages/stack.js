@@ -21,7 +21,7 @@ export default function About() {
 	return <>
 		<MetaHeader pageMeta={pageMeta} />
 		<header className="mb-8 md:mb-10 lg:mb-12 mt-5 md:mt-16">
-			<h2 className="text-3xl lg:text-4xl text-amber-600 font-light mb-5 md:mb-10 mt-5 md:mt-16">About</h2>
+			<h2 className="text-3xl lg:text-4xl text-amber-600 font-light mb-5 md:mb-10 mt-5 md:mt-16">Tech Stack</h2>
 		</header>
 
 		<motion.main
@@ -29,7 +29,6 @@ export default function About() {
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
 			className="markdown">
-			<p>👋 Hi, I'm Théo, a <strong>full stack developer</strong> from Paris, France.</p>
 
 			<p>Below is a non-exhaustive list of some tools and languages I have worked with:</p>
 
@@ -37,6 +36,7 @@ export default function About() {
 				<h3 className="text-gray-900 hover:text-amber-600 dark:text-bluegray-300 font-semibold text-lg lg:text-xl mb-4 mt-8"><a href="#languages">Languages</a></h3>
 				<TechCards techs={[
 					{ name: 'Rust', src: '/img/techs/rust.svg', href: 'https://www.rust-lang.org/' },
+					{ name: 'WASM', src: '/img/techs/wasm.svg', href: 'https://webassembly.org/' },
 					// { name: 'TypeScript', src: '/img/techs/typescript.svg', href: 'https://www.typescriptlang.org/' },
 					{ name: 'JavaScript', src: '/img/techs/javascript.svg', href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
 					{ name: 'Java', src: '/img/techs/java.svg', href: 'https://www.java.com/' },

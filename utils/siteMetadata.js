@@ -23,7 +23,7 @@ const navLinks = [
 	{ href: '/', label: 'Blog' },
 	// { href: '/dashboard', label: 'Dashboard' },
 	// { href: '/photography', label: 'Photography' },
-	{ href: '/about', label: 'About' },
+	{ href: '/stack', label: 'Tech Stack' },
 	{ href: '/timeline', label: 'Timeline' },
 	// { href: '/uses', label: 'Uses' }
 ]
