@@ -2,7 +2,6 @@ import Sidebar from 'components/Navigation/Sidebar'
 import MobileMenu from 'components/Navigation/MobileMenu'
 import NProgress from 'nprogress'
 import Router from 'next/router'
-import { AnimatePresence, motion } from "framer-motion"
 import ThemeToggle from "components/ThemeToggle"
 
 Router.onRouteChangeStart = () => NProgress.start()
@@ -10,11 +9,7 @@ Router.onRouteChangeComplete = () => NProgress.done()
 Router.onRouteChangeError = () => NProgress.done()
 
 export default function Layout({ children, home }) {
-	return (<motion.div
-		initial={{ opacity: 0 }}
-		animate={{ opacity: 1 }}
-		exit={{ opacity: 0 }}
-		className="max-w-screen-xl md:divide-x mx-auto dark:divide-amber-600">
+	return <div className="max-w-screen-xl md:divide-x mx-auto dark:divide-amber-600">
 		<div>
 			<Sidebar />
 			<MobileMenu />
@@ -23,9 +18,7 @@ export default function Layout({ children, home }) {
 			<div className="hidden md:block float-right mt-16">
 				<ThemeToggle />
 			</div>
-			<AnimatePresence exitBeforeEnter>
-				{children}
-			</AnimatePresence>
+			{children}
 		</div>
-	</motion.div>)
+	</div>
 }

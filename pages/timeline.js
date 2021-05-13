@@ -3,7 +3,6 @@ import MetaHeader from 'components/Social/MetaHeader'
 import { siteInfo } from 'utils/siteMetadata'
 import Timeline from 'components/Timeline'
 import { milestones } from 'utils/milestones'
-import { motion } from 'framer-motion'
 
 export default function TimelinePage() {
 	const pageMeta = {
@@ -24,10 +23,7 @@ export default function TimelinePage() {
 			<h2 className="text-3xl lg:text-4xl text-amber-600 font-light mb-5 md:mb-10 mt-5 md:mt-16">Timeline</h2>
 		</header>
 
-		<motion.main
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}>
+		<main>
 			<p className="dark:text-bluegray-200 mb-5">Below are some of the milestones in my journey as a developer. Click the the card to view deployed projects 👇</p>
 			<Timeline milestones={milestones} />
 			<div className="flex justify-center my-16">
@@ -35,7 +31,7 @@ export default function TimelinePage() {
 					← Home
             </a></Link>
 			</div>
-		</motion.main>
+		</main>
 
 	</>
 }

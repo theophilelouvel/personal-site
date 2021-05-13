@@ -2,7 +2,6 @@ import Link from 'next/link'
 import MetaHeader from 'components/Social/MetaHeader'
 import { siteInfo } from 'utils/siteMetadata'
 import TechCards from 'components/TechCards'
-import { motion } from 'framer-motion'
 
 export default function About() {
 
@@ -24,11 +23,7 @@ export default function About() {
 			<h2 className="text-3xl lg:text-4xl text-amber-600 font-light mb-5 md:mb-10 mt-5 md:mt-16">Tech Stack</h2>
 		</header>
 
-		<motion.main
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}
-			className="markdown">
+		<main className="markdown">
 
 			<p>Below is a non-exhaustive list of some tools and languages I have worked with:</p>
 
@@ -93,7 +88,7 @@ export default function About() {
 					← Home
             </a></Link>
 			</div>
-		</motion.main>
+		</main>
 
 	</>
 }

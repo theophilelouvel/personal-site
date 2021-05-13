@@ -1,7 +1,7 @@
 # Notes
 
-This is my portfolio, which I built around the whole jamstack thing:
+My blog, built around the whole jamstack thing:
 
 - [Next.js](https://nextjs.org/)
-- [React](https://reactjs.org/)
+- ~~[React](https://reactjs.org/)~~ -> [Preact](https://preactjs.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
