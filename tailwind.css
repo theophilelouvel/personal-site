@@ -83,7 +83,7 @@ body {
 }
 
 .markdown pre > code {
-    @apply p-2 md:p-5 rounded
+    @apply p-2 md:p-5 rounded mt-5
 }
 
 .markdown p > code {

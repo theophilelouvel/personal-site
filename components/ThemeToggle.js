@@ -2,7 +2,7 @@ import { useTheme } from 'next-themes'
 import { FiSun, FiMoon } from 'react-icons/fi'
 
 export default function ThemeToggle() {
-	const { theme, setTheme } = useTheme();
+	const { theme, setTheme } = useTheme()
 
 	return (
 		<button
