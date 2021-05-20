@@ -1,5 +1,5 @@
 ---
-title: Karatsuba in plain English (Part I)
+title: Karatsuba in plain English
 description: Headaches are comming
 date: '2021-05-19'
 updated: '2021-05-19'
@@ -115,7 +115,7 @@ Translating things into a programming language, however, can be a bit tricky (#p
 My first implementation revolved around the exact same steps we discussed. I decided to use JavaScript BigInt, hoping it would solve the overflow problem, as JavaScript natively supports only integers up to `9.007.199.254.740.991`, which you can find out by running the following command: `console.log(Number.MAX_SAFE_INTEGER)`. `BigInt`s are a relatively recent JavaScript construct that aims to remove this limitation. You can use them either by specifying `BigInt(123456789)` or by appending an `n` to the number, like so: `123456789n`.
 
 ```js:index.js
-const karatsuba = (x, y, n) => {
+const multiply = (x, y, n) => {
     if (x < 10n && y < 10n) return x * y
 
     if (n % 2n != 0n) n += 1n
@@ -129,15 +129,15 @@ const karatsuba = (x, y, n) => {
     const c = y / den2
     const d = y % den2
 
-    const ac = karatsuba(a, c, halfN)
-    const bd = karatsuba(b, d, halfN)
-    const abcd = karatsuba(a + b, c + d, halfN)
+    const ac = multiply(a, c, halfN)
+    const bd = multiply(b, d, halfN)
+    const abcd = multiply(a + b, c + d, halfN)
 
     return ac * 10n ** n + (abcd - bd - ac) * den2 + bd
 }
 
 console.log(
-    karatsuba(
+    multiply(
     59342232343423423252n,
     76345345344353543553427n,
     24n
@@ -159,7 +159,7 @@ So how can we make things work?
 One solution is actually to just use strings! We should be able to save ourselves a lot of meaningless and expensive operations, such as splitting numbers the way we were doing it. We don't have access to pointers for the memory where numbers are stored in in JavaScript, but working with string slices should make our lives much easier, and `BigInt` works well enough with strings!
 
 ```js:index.js
-const karatsuba = (x, y) => {
+const multiply = (x, y) => {
     if (BigInt(x) < 10n && BigInt(y) < 10n) {
         return BigInt(x) * BigInt(y)
     }
@@ -175,16 +175,16 @@ const karatsuba = (x, y) => {
     const c = y.substring(0, yHalf)
     const d = y.substring(yHalf)
 
-    const ac = karatsuba(a, c)
-    const bd = karatsuba(b, d)
-    const ad = karatsuba(a, d)
-    const bc = karatsuba(b, c)
+    const ac = multiply(a, c)
+    const bd = multiply(b, d)
+    const ad = multiply(a, d)
+    const bc = multiply(b, c)
 
     return (ac * 10n ** n) + ((ad + bc) * 10n ** halfN) + bd
 }
 
 console.log(
-    karatsuba(
+    multiply(
         '3141592653589793238462643383279502884197169399375105820974944592',
         '2718281828459045235360287471352662497757247093699959574966967627'
     )
@@ -200,6 +200,6 @@ For the algorithm to be complete and an accurate implementation, **we will need 
 
 Also, this is something that would be probably better done in base that's a power of 2, which would allow us to use bit shift operations instead of powers, allowing for much faster execution.
 
-But that's for another time!
+### Refactoring
 
-Thanks for reading!
+🚧 Coming soon 🚧
