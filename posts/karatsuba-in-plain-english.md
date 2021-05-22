@@ -158,6 +158,12 @@ So how can we make things work?
 
 One solution is actually to just use strings! We should be able to save ourselves a lot of meaningless and expensive operations, such as splitting numbers the way we were doing it. We don't have access to pointers for the memory where numbers are stored in in JavaScript, but working with string slices should make our lives much easier, and `BigInt` works well enough with strings!
 
+There's a caveat, though: Because we're working with strings and that the `.substring()` method only accepts regular integers, not `BigInt`, we can't really perform the "Gauss step" without running into various issues such as `RangeError: Maximum call stack size exceeded` or losing precision when adding up the numbers.
+
+While it might not seem like a big issue, it significantly affect the running time of our program: Indeed, **having four recursive calls instead of three takes us right back to the grade school algorithm's performance**. However, it stills leaves us with the ability to perform accurate and fast multiplication on big numbers that would not otherwise be possible using JavaScript's standard library. 
+
+Let's try and see what that might look like:
+
 ```js:index.js
 const multiply = (x, y) => {
     if (BigInt(x) < 10n && BigInt(y) < 10n) {
@@ -192,9 +198,9 @@ console.log(
 //8539734222673567065463550869546574495034888535765114961879601127067743044893204848617875072216249073013374895871952806582723184n
 ```
 
-We've done it! This yields the right result, and in a matter of seconds! 🥳
+This yields the right result, and in a matter of (milli)seconds! We've done it! 🥳
 
-There's a caveat, though: Because we're working with strings and that the `.substring()` method only accepts regular integers, not `BigInt`, we can't really perform the "Gauss step" without running into various issues such as `RangeError: Maximum call stack size exceeded` or losing precision when adding up the numbers.
+But how to implement the full-blown Karatsuba algorithm then?
 
 For the algorithm to be complete and an accurate implementation, **we will need to implement custom add, multiply and subtract functions that work with Strings or Vectors** (depending on what we choose), allowing us to work without loosing any precision.
 
