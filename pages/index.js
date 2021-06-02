@@ -34,7 +34,7 @@ export default function Index({ posts }) {
         <MetaHeader pageMeta={pageMeta} />
         <header>
             <h2 className="text-3xl lg:text-4xl text-amber-600 font-light mb-5 md:mb-10 mt-5 md:mt-16">Blog Posts</h2>
-            <p className="dark:text-bluegray-200 mb-5">👋 Hi, I'm Théo, a <strong>full stack developer</strong> from Paris, France. Here I mostly write about algorithms. <a target="_blank" href="https://theolouvel.medium.com/" className="text-amber-600">I also write on Medium</a> on other topics from time to time. I mostly speak French, English, Russian, <strong>Rust & JavaScript.</strong></p>
+            <p className="dark:text-bluegray-200 mb-5">👋 Hi, I'm Théo, a <strong>full stack developer</strong> from Paris, France. Here I mostly write about software engineering. <a target="_blank" href="https://theolouvel.medium.com/" className="text-amber-600">I also write on Medium</a> on other topics from time to time. I mostly speak French, English, Russian, <strong>Rust & JavaScript.</strong></p>
         </header>
         <main>
             {posts.map((post) => (

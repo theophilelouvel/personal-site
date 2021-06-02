@@ -10,7 +10,7 @@ cover: 5mZ_M06Fc9g
 
 As I'm learning more and more about algorithms, I came across Karatsuba's multiplication. The explanations I found here and there felt somewhat incomplete to me, as they usually assume a lot about the reader's background. As I finally wrapped my head around it, I thought I'd take the time to make it more accessible to others. It's actually surprisingly simple once you find the right explanations and / or visualizations!
 
-**If the algorithm in itself is quite simple and elegant, its implementation, on the other hand, can be rather tricky.** In this article, we'll work our way towards a working JavaScript implementation and see some of the JavaScript's limitations. In a later article we'll implement the full-blown Karatsuba multiplication in Rust.
+**If the algorithm in itself is quite simple and elegant, its implementation, on the other hand, can be rather tricky.** In this article, we'll work our way towards a working JavaScript implementation and see some of the  limitations of such an implementation.
 
 ### Time complexity: Is it worth it?
 
@@ -202,10 +202,8 @@ This yields the right result, and in a matter of (milli)seconds! We've done it! 
 
 But how to implement the full-blown Karatsuba algorithm then?
 
-For the algorithm to be complete and an accurate implementation, **we will need to implement custom add, multiply and subtract functions that work with Strings or Vectors** (depending on what we choose), allowing us to work without loosing any precision.
+For the algorithm to be complete and an accurate implementation, **we would need to implement custom add, multiply and subtract functions that work with Strings or Vectors** (depending on what we choose), allowing us to work without loosing any precision.
 
 Also, this is something that would be probably better done in base that's a power of 2, which would allow us to use bit shift operations instead of powers, allowing for much faster execution.
 
-### Refactoring
-
-🚧 Coming soon 🚧
+While implementing those operations is usually the domain of the language standard librairies, it's nice to see how things work behind the scenes. But abstractions come at a cost and to implement this algorithm one should probably use a lower level language like Rust.
