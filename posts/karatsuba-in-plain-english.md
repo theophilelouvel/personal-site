@@ -206,4 +206,4 @@ For the algorithm to be complete and an accurate implementation, **we would need
 
 Also, this is something that would be probably better done in base that's a power of 2, which would allow us to use bit shift operations instead of powers, allowing for much faster execution.
 
-While implementing those operations is usually the domain of the language standard librairies, it's nice to see how things work behind the scenes. But abstractions come at a cost and to implement this algorithm one should probably use a lower level language like Rust.
+While implementing those operations is usually the domain of a language standard librairy, it's nice to see how things work behind the scenes. But abstractions come at a cost and to implement this algorithm one should probably use a lower level language like Rust.
